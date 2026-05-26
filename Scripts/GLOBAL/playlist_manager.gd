@@ -8,6 +8,9 @@ extends Node
 @export var play_mode: int = 0
 
 func generate_random_playlist(n: int = 5):
+	if len(AudioManager.song_library.songs_list.keys()) <= 1:
+		return
+	
 	available_playlist = []
 	actual_playlist = []
 	actual_playlist.append([AudioManager.selected_song, AudioManager.selected_author])

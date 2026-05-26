@@ -6,6 +6,8 @@ extends Node
 
 signal my_file(nm: String, auth: String)
 
+var _lib: LibrarySave
+
 func open_file_manager():
 	file_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
 	file_dialog.filters = PackedStringArray(["*.wav, *.ogg, *.mp3 ; Music"])
@@ -62,6 +64,7 @@ func file_selected(path: String, autoplay: bool = true):
 	edit_song_data.show_song(file_res)
 	await edit_song_data.author_changed
 	file_res.author = edit_song_data.new_author_name
+	file_res.path = path
 	AudioManager.add_song(file_res)
 	if autoplay:
 		AudioManager.selected_song = file_res.name
@@ -70,6 +73,13 @@ func file_selected(path: String, autoplay: bool = true):
 		AudioManager.play_song(new_song_res)
 		PlaylistManager.generate_random_playlist()
 		my_file.emit(file_res.name, file_res.author)
+	 
+	if LibrarySave.save_exists():
+		_lib = LibrarySave.load_savegame() as LibrarySave
+		for i in AudioManager.song_library.songs_list.values():
+			_lib.songs_key_data[i.path] = i.author
+		_lib.write_savegame()
+	
 	group_handle.create_groups()
 
 func scan_folder(folder_path: String):
