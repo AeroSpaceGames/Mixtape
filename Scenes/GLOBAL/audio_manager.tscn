@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://q8bgb2thow6r"]
+
+[ext_resource type="Script" uid="uid://c3cecs4xaf01a" path="res://Scripts/audio_manager.gd" id="1_nhj3b"]
+[ext_resource type="Script" uid="uid://cq2tp7oduqe23" path="res://Resources/SongLibrary.gd" id="2_0gruc"]
+[ext_resource type="Script" uid="uid://bm2t4frf1rxly" path="res://Resources/Song.gd" id="3_bgdtv"]
+[ext_resource type="AudioStream" uid="uid://c2iji1ofdht24" path="res://Asssets/Music/Rick Roll.mp3" id="4_fgxpv"]
+[ext_resource type="AudioStream" uid="uid://bvhowewvedpy7" path="res://Asssets/Music/Bonetrousle.mp3" id="5_uykod"]
+[ext_resource type="AudioStream" uid="uid://kcdk4si2031w" path="res://Asssets/Music/Bossfight - Milky Ways.mp3" id="6_a50qa"]
+
+[sub_resource type="Resource" id="Resource_q6yvr"]
+script = ExtResource("3_bgdtv")
+stream = ExtResource("6_a50qa")
+author = "Bossfight"
+name = "Milky ways"
+duration = 187
+metadata/_custom_type_script = "uid://bm2t4frf1rxly"
+
+[sub_resource type="Resource" id="Resource_uykod"]
+script = ExtResource("3_bgdtv")
+stream = ExtResource("5_uykod")
+author = "Toby Fox"
+name = "Papyrus"
+duration = 61
+metadata/_custom_type_script = "uid://bm2t4frf1rxly"
+
+[sub_resource type="Resource" id="Resource_fgxpv"]
+script = ExtResource("3_bgdtv")
+stream = ExtResource("4_fgxpv")
+author = "Rick Astley"
+name = "Rick Roll"
+duration = 213
+metadata/_custom_type_script = "uid://bm2t4frf1rxly"
+
+[sub_resource type="Resource" id="Resource_a50qa"]
+script = ExtResource("2_0gruc")
+songs_list = Dictionary[String, ExtResource("3_bgdtv")]({
+"Milky ways": SubResource("Resource_q6yvr"),
+"Papyrus": SubResource("Resource_uykod"),
+"Rick Roll": SubResource("Resource_fgxpv")
+})
+metadata/_custom_type_script = "uid://cq2tp7oduqe23"
+
+[node name="AudioManager" type="Control" unique_id=1359455187]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nhj3b")
+song_library = SubResource("Resource_a50qa")
+
+[node name="Player" type="AudioStreamPlayer" parent="." unique_id=421325531]
+
+[connection signal="finished" from="Player" to="." method="_on_player_finished"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SongLibrary" format=3 uid="uid://drcqnw2ma3kdb"]
+
+[ext_resource type="Script" uid="uid://cq2tp7oduqe23" path="res://Resources/SongLibrary.gd" id="1_402uq"]
+[ext_resource type="Script" uid="uid://bm2t4frf1rxly" path="res://Resources/Song.gd" id="2_huf1n"]
+
+[resource]
+script = ExtResource("1_402uq")
+metadata/_custom_type_script = "uid://cq2tp7oduqe23"

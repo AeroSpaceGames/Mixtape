@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://cfvlt64f0csp5"]
+
+[ext_resource type="Script" uid="uid://cqlduviglf3v4" path="res://Scripts/current_song.gd" id="1_50pdt"]
+[ext_resource type="Script" uid="uid://cya2f8fptut6" path="res://Scripts/edit_song_data.gd" id="2_4y0hx"]
+[ext_resource type="Script" uid="uid://bfubgp4hj7vf6" path="res://Scripts/groups_manager.gd" id="2_50pdt"]
+[ext_resource type="Script" uid="uid://yja2escdyw7r" path="res://Scripts/uploading_handle.gd" id="3_8e680"]
+
+[node name="Testing" type="Control" unique_id=688034521]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1274205428]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer" unique_id=185358945]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -251.0
+offset_top = 85.0
+offset_right = 251.0
+offset_bottom = 764.0
+grow_horizontal = 2
+
+[node name="GroupContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer" unique_id=184765837]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CurrentSong" type="Control" parent="CanvasLayer" unique_id=1784813829]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 222)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -377.0
+offset_right = 225.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_50pdt")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/CurrentSong" unique_id=365714272]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -111.0
+offset_right = 225.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="CanvasLayer/CurrentSong" unique_id=362537486]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.0
+offset_top = 10.0
+offset_right = 102.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 39
+text = "SongName"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="CanvasLayer/CurrentSong" unique_id=301255117]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -41.0
+offset_right = 42.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Author"
+horizontal_alignment = 1
+
+[node name="Pause" type="Button" parent="CanvasLayer/CurrentSong" unique_id=1078494444]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.5
+offset_top = -93.0
+offset_right = 54.5
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+
+[node name="Next" type="Button" parent="CanvasLayer/CurrentSong" unique_id=2118802961]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = -93.0
+offset_right = 201.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "Next"
+
+[node name="Prev" type="Button" parent="CanvasLayer/CurrentSong" unique_id=2083393901]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -93.0
+offset_right = -88.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "Prev"
+
+[node name="Upload" type="Button" parent="CanvasLayer/CurrentSong" unique_id=549232287]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -219.0
+offset_right = 129.0
+offset_bottom = -162.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Upload"
+
+[node name="UploadFolder" type="Button" parent="CanvasLayer/CurrentSong" unique_id=866935241]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -217.0
+offset_bottom = -160.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Folder"
+
+[node name="PlayMode" type="Button" parent="CanvasLayer/CurrentSong" unique_id=319920618]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -210.0
+offset_right = 115.0
+offset_bottom = -153.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Linear"
+
+[node name="TimePreview" type="HSlider" parent="CanvasLayer/CurrentSong" unique_id=1456247365]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 25.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Seconds" type="Timer" parent="CanvasLayer/CurrentSong" unique_id=1576356959]
+
+[node name="EditSongData" type="Control" parent="CanvasLayer" unique_id=1493723930]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_4y0hx")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/EditSongData" unique_id=1208486754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnterTheAuthor" type="Label" parent="CanvasLayer/EditSongData" unique_id=869350520]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.0
+offset_top = -157.0
+offset_right = 182.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Enter the Author"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/EditSongData" unique_id=64991541]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.0
+offset_top = -246.0
+offset_right = 182.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "SongName"
+horizontal_alignment = 1
+
+[node name="AuthorEdit" type="LineEdit" parent="CanvasLayer/EditSongData" unique_id=422865228]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -65.0
+offset_right = 262.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Whos the author?"
+
+[node name="OK" type="Button" parent="CanvasLayer/EditSongData" unique_id=757775751]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = 99.0
+offset_right = 32.5
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "OK"
+
+[node name="GroupHandle" type="Node" parent="." unique_id=1200405772]
+unique_name_in_owner = true
+script = ExtResource("2_50pdt")
+
+[node name="UploadingHandle" type="Node" parent="." unique_id=2099140355]
+script = ExtResource("3_8e680")
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=116135705]
+unique_name_in_owner = true
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 1
+ok_button_text = "Select"
+dialog_hide_on_ok = true
+file_mode = 0
+display_mode = 1
+access = 2
+use_native_dialog = true
+hidden_files_toggle_enabled = false
+folder_creation_enabled = false
+overwrite_warning_enabled = false
+deleting_enabled = false
+
+[connection signal="button_down" from="CanvasLayer/CurrentSong/Pause" to="CanvasLayer/CurrentSong" method="pause_resume_song"]
+[connection signal="button_down" from="CanvasLayer/CurrentSong/Next" to="CanvasLayer/CurrentSong" method="next_song"]
+[connection signal="button_down" from="CanvasLayer/CurrentSong/Prev" to="CanvasLayer/CurrentSong" method="prev_song"]
+[connection signal="button_down" from="CanvasLayer/CurrentSong/Upload" to="UploadingHandle" method="open_file_manager"]
+[connection signal="button_down" from="CanvasLayer/CurrentSong/UploadFolder" to="UploadingHandle" method="open_folder_manager"]
+[connection signal="drag_ended" from="CanvasLayer/CurrentSong/TimePreview" to="CanvasLayer/CurrentSong" method="move_to_second"]
+[connection signal="timeout" from="CanvasLayer/CurrentSong/Seconds" to="CanvasLayer/CurrentSong" method="second_passed"]
+[connection signal="button_down" from="CanvasLayer/EditSongData/OK" to="CanvasLayer/EditSongData" method="set_author"]
+[connection signal="my_file" from="UploadingHandle" to="GroupHandle" method="_set_current"]
+[connection signal="dir_selected" from="FileDialog" to="UploadingHandle" method="dir_selected"]
+[connection signal="file_selected" from="FileDialog" to="UploadingHandle" method="file_selected"]
