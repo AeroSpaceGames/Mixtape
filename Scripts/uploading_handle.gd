@@ -1,7 +1,7 @@
 extends Node
 
 @onready var file_dialog: FileDialog = %FileDialog
-@onready var edit_song_data: Control = %EditSongData
+@onready var edit_song_data: Control = %TextEdit
 @onready var group_handle: Node = %GroupHandle
 
 signal my_file(nm: String, auth: String)
@@ -62,8 +62,8 @@ func file_selected(path: String, autoplay: bool = true):
 	@warning_ignore("narrowing_conversion")
 	file_res.duration = file_res.stream.get_length()
 	edit_song_data.show_song(file_res)
-	await edit_song_data.author_changed
-	file_res.author = edit_song_data.new_author_name
+	await edit_song_data.text_changed
+	file_res.author = edit_song_data.saved_name
 	file_res.path = path
 	AudioManager.add_song(file_res)
 	if autoplay:
@@ -77,7 +77,8 @@ func file_selected(path: String, autoplay: bool = true):
 	if LibrarySave.save_exists():
 		_lib = LibrarySave.load_savegame() as LibrarySave
 		for i in AudioManager.song_library.songs_list.values():
-			_lib.songs_key_data[i.path] = i.author
+			if i.path != "":
+				_lib.songs_key_data[i.path] = i.author
 		_lib.write_savegame()
 	
 	group_handle.create_groups()
@@ -108,7 +109,7 @@ func scan_folder(folder_path: String):
 		
 		if extension in ["mp3", "ogg", "wav"]:
 			file_selected(full_path, false)
-			await edit_song_data.author_changed
+			await edit_song_data.text_changed
 		
 		await get_tree().create_timer(0.1).timeout
 	dir.list_dir_end()

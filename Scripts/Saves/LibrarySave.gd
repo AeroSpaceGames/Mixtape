@@ -44,7 +44,13 @@ func load_song_file(path: String) -> AudioStream:
 func load_song_from_lib(path: String, auth: String):
 	var file_res: Song = Song.new()
 	
-	print(path, " ", auth)
+	if !FileAccess.file_exists(path):
+		file_res.stream = AudioStream.new()
+		file_res.name = path.get_file().get_basename()
+		file_res.duration = 0
+		file_res.author = "File Not Found"
+		return file_res
+	
 	file_res.stream = load_song_file(path)
 	file_res.name = path.get_file().get_basename()
 	@warning_ignore("narrowing_conversion")

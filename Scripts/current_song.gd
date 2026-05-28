@@ -50,12 +50,12 @@ func pause_resume_song():
 
 func next_song():
 	if AudioManager.selected_song != "" and PlaylistManager.has_next_song():
-		var new_song: Song = PlaylistManager.get_next_song(1, PlaylistManager.play_mode)
+		var new_song: Song = PlaylistManager.get_next_song(1)
 		TrackManager.change_song(new_song.name, new_song.author)
 		set_song(AudioManager.song_library.get_song(AudioManager.selected_song,AudioManager.selected_author))
 
 func prev_song():
 	if AudioManager.selected_song != "" and PlaylistManager.has_next_song(-1):
-		var new_song: Song = PlaylistManager.get_next_song(-1, PlaylistManager.play_mode)
+		var new_song: Song = PlaylistManager.get_next_song(-1)
 		TrackManager.change_song(new_song.name, new_song.author)
 		set_song(AudioManager.song_library.get_song(AudioManager.selected_song,AudioManager.selected_author))

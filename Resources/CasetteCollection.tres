@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CasetteCollection" format=3 uid="uid://hffm4uny8a2l"]
+
+[ext_resource type="Script" uid="uid://cjnjof1kagn5h" path="res://Resources/Casette.gd" id="1_ndwgv"]
+[ext_resource type="Script" uid="uid://donu6d8dgyy1s" path="res://Resources/CasetteCollection.gd" id="2_j1epj"]
+
+[resource]
+script = ExtResource("2_j1epj")
+metadata/_custom_type_script = "uid://donu6d8dgyy1s"

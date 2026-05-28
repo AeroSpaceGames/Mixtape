@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c3et320epijge"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hky65"]
+bg_color = Color(0.6389008, 0.32383102, 0.2579752, 1)
+
+[node name="CasetteGroup" type="Control" unique_id=1082966649]
+custom_minimum_size = Vector2(320, 102)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 102.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1397752702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hky65")
+
+[node name="Name" type="Label" parent="." unique_id=1728014125]
+layout_mode = 1
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 181.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 25
+text = "Casette Name"
+
+[node name="Duration" type="Label" parent="." unique_id=262525345]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -57.0
+offset_right = 181.0
+offset_bottom = -22.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Duration: 3:13"
+
+[node name="Select" type="Button" parent="." unique_id=371816765]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -30.0
+offset_right = -27.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Select"

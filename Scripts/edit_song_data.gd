@@ -1,22 +1,33 @@
 extends Control
 @onready var song_name: Label = $Name
-@onready var author_edit: LineEdit = $AuthorEdit
+@onready var line_edit: LineEdit = $LineEdit
+@onready var title: Label = $Title
 
-@export var new_author_name: String = ""
+@export var saved_name: String = ""
 
-signal author_changed(auth: String)
+signal text_changed(txt: String)
 
 func _ready() -> void:
 	hide()
 
+func show_casette():
+	title.text = "Casette's Name"
+	line_edit.placeholder_text = "My Casette"
+	line_edit.text = ""
+	saved_name = ""
+	song_name.text = ""
+	show()
+
 func show_song(res: Song):
-	author_edit.text = ""
-	new_author_name = ""
+	title.text = "Enter the Author"
+	line_edit.placeholder_text = "Whos the author?"
+	line_edit.text = ""
+	saved_name = ""
 	song_name.text = res.name
 	show()
 
 func set_author():
-	if author_edit.text != "":
-		new_author_name = author_edit.text
-		author_changed.emit(author_edit.text)
+	if line_edit.text != "":
+		saved_name = line_edit.text
+		text_changed.emit(line_edit.text)
 		hide()
