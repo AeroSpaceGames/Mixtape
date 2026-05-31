@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bfubgp4hj7vf6" path="res://Scripts/groups_manager.gd" id="2_50pdt"]
 [ext_resource type="Script" uid="uid://yja2escdyw7r" path="res://Scripts/uploading_handle.gd" id="3_8e680"]
 [ext_resource type="Script" uid="uid://bfqicc7dgf36p" path="res://Scripts/flow_manager.gd" id="3_y53xc"]
+[ext_resource type="Script" uid="uid://gmm3tnh67mru" path="res://Scripts/casette_songs.gd" id="4_7wycu"]
 [ext_resource type="Script" uid="uid://bnx6jhmsq1mlg" path="res://Scripts/collection_handler.gd" id="6_7mle0"]
 [ext_resource type="Script" uid="uid://d4fotw58gln82" path="res://Scripts/collection_groups.gd" id="7_xgmvj"]
 
@@ -388,6 +389,52 @@ text = "Collection"
 [node name="FlowManager" type="Node" parent="Utility/CanvasLayer" unique_id=1305071637]
 script = ExtResource("3_y53xc")
 
+[node name="CasetteSongs" type="Control" parent="Utility/CanvasLayer" unique_id=1113988724]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_7wycu")
+
+[node name="Background" type="ColorRect" parent="Utility/CanvasLayer/CasetteSongs" unique_id=25792688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+
+[node name="Close" type="Button" parent="Utility/CanvasLayer/CasetteSongs" unique_id=312810261]
+layout_mode = 1
+offset_left = 39.0
+offset_top = 43.0
+offset_right = 112.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 35
+text = "Close"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Utility/CanvasLayer/CasetteSongs" unique_id=692192672]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -470.0
+offset_right = 272.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SongsGroup" type="VBoxContainer" parent="Utility/CanvasLayer/CasetteSongs/ScrollContainer" unique_id=1625444616]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="Library" type="Control" parent="." unique_id=688034521]
 custom_minimum_size = Vector2(720, 1280)
 layout_mode = 1
@@ -504,6 +551,7 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 [connection signal="button_down" from="Utility/CanvasLayer/TextEdit/OK" to="Utility/CanvasLayer/TextEdit" method="set_author"]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Lib" to="Utility/CanvasLayer/FlowManager" method="go_to_library"]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]
+[connection signal="button_down" from="Utility/CanvasLayer/CasetteSongs/Close" to="Utility/CanvasLayer/CasetteSongs" method="close_casette"]
 [connection signal="my_file" from="Library/UploadingHandle" to="Library/GroupHandle" method="_set_current"]
 [connection signal="dir_selected" from="Library/FileDialog" to="Library/UploadingHandle" method="dir_selected"]
 [connection signal="file_selected" from="Library/FileDialog" to="Library/UploadingHandle" method="file_selected"]

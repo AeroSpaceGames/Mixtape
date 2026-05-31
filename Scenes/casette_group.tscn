@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c3et320epijge"]
 
+[ext_resource type="Script" uid="uid://bmcfjnwav27aw" path="res://Scripts/casette_group.gd" id="1_iffe5"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hky65"]
 bg_color = Color(0.6389008, 0.32383102, 0.2579752, 1)
 
@@ -9,6 +11,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 102.0
+script = ExtResource("1_iffe5")
 
 [node name="Panel" type="Panel" parent="." unique_id=1397752702]
 layout_mode = 1
@@ -56,3 +59,5 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Select"
+
+[connection signal="button_down" from="Select" to="." method="open_me"]

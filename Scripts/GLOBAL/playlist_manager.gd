@@ -8,8 +8,23 @@ extends Node
 @export var collection_library: CasetteCollection = CasetteCollection.new()
 var designs: Array = [0,1,2]
 
+var selected_casette: String = ""
+
 func add_casette(nm: String, res: Casette):
 	collection_library.casette_list[nm] = res
+
+
+func generate_playlist(songs: Array):
+	actual_playlist = []
+	#actual_playlist.append([AudioManager.selected_song, AudioManager.selected_author])
+	
+	for i in range(1, len(songs) * 2):
+		var next_song: Song = AudioManager.song_library.songs_list.values()[songs[i % (len(songs))]]
+		actual_playlist.append([next_song.name, next_song.author])
+	
+	print(actual_playlist)
+	
+	playlist_index = 0
 
 func generate_random_playlist(n: int = 5):
 	if len(AudioManager.song_library.songs_list.keys()) <= 1:

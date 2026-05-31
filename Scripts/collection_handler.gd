@@ -11,7 +11,7 @@ func create_new_casette():
 	new_casette.my_name = text_edit.saved_name
 	new_casette.duration = 0.0
 	new_casette.design = PlaylistManager.designs.pick_random()
-	new_casette.song_indexes = []
+	new_casette.song_indexes = [0,1,2]
 	PlaylistManager.add_casette(new_casette.my_name, new_casette)
 	
 	collection_groups.create_groups()
