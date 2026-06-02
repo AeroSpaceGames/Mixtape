@@ -417,6 +417,32 @@ offset_bottom = 86.0
 theme_override_font_sizes/font_size = 35
 text = "Close"
 
+[node name="AddRemove" type="Button" parent="Utility/CanvasLayer/CasetteSongs" unique_id=1264143062]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -153.0
+offset_top = 44.0
+offset_right = -88.0
+offset_bottom = 94.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Add"
+
+[node name="SongSelection" type="OptionButton" parent="Utility/CanvasLayer/CasetteSongs" unique_id=165639587]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 63.0
+offset_right = 130.0
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Utility/CanvasLayer/CasetteSongs" unique_id=692192672]
 layout_mode = 1
 anchors_preset = 8
@@ -552,6 +578,8 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Lib" to="Utility/CanvasLayer/FlowManager" method="go_to_library"]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]
 [connection signal="button_down" from="Utility/CanvasLayer/CasetteSongs/Close" to="Utility/CanvasLayer/CasetteSongs" method="close_casette"]
+[connection signal="button_down" from="Utility/CanvasLayer/CasetteSongs/AddRemove" to="Utility/CanvasLayer/CasetteSongs" method="add_or_remove"]
+[connection signal="item_selected" from="Utility/CanvasLayer/CasetteSongs/SongSelection" to="Utility/CanvasLayer/CasetteSongs" method="song_selected"]
 [connection signal="my_file" from="Library/UploadingHandle" to="Library/GroupHandle" method="_set_current"]
 [connection signal="dir_selected" from="Library/FileDialog" to="Library/UploadingHandle" method="dir_selected"]
 [connection signal="file_selected" from="Library/FileDialog" to="Library/UploadingHandle" method="file_selected"]
