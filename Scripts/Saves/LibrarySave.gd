@@ -55,6 +55,7 @@ func load_song_from_lib(path: String, auth: String):
 	file_res.name = path.get_file().get_basename()
 	@warning_ignore("narrowing_conversion")
 	file_res.duration = file_res.stream.get_length()
+	print(file_res.duration)
 	file_res.author = auth
 	AudioManager.add_song(file_res)
 

@@ -6,17 +6,25 @@ var group_scene = preload("res://Scenes/song_group.tscn")
 @onready var current_song: Control = %CurrentSong
 @onready var song_selection: OptionButton = %SongSelection
 @onready var add_remove: Button = $AddRemove
+@onready var duration: Label = $Duration
+
+var _coll: CollectionSave
 
 var recent_casette: Casette = null
 
 func _ready() -> void:
 	close_casette()
 
-func open_casette(res: Casette):
+func open_casette(nm: String):
+	var res = PlaylistManager.collection_library.casette_list[nm]
 	sort_songs(res.song_indexes)
 	recent_casette = res
+	show_duration()
 	load_new_songs()
 	show()
+
+func show_duration():
+	duration.text = "Duration: " + str(recent_casette.duration)
 
 func close_casette():
 	recent_casette = Casette.new()
@@ -54,11 +62,30 @@ func song_selected(_idx: int):
 func add_or_remove():
 	var idx: int = song_selection.get_item_index(song_selection.get_selected_id())
 	if idx in recent_casette.song_indexes:
+		#remove
 		PlaylistManager.collection_library.casette_list[recent_casette.my_name].song_indexes.erase(idx)
 	else:
+		#add
 		PlaylistManager.collection_library.casette_list[recent_casette.my_name].song_indexes.append(idx)
 	
 	recent_casette.song_indexes = PlaylistManager.collection_library.casette_list[recent_casette.my_name].song_indexes
+	
+	#Duration calc
+	var final_duration: int = 0
+	for i in recent_casette.song_indexes:
+		print(AudioManager.song_library.songs_list.values()[i].duration)
+		final_duration += AudioManager.song_library.songs_list.values()[i].duration
+	PlaylistManager.collection_library.casette_list[recent_casette.my_name].duration = final_duration
+	
+	show_duration()
+	
+	#Save control
+	if CollectionSave.save_exists():
+		_coll = CollectionSave.load_savegame() as CollectionSave
+		_coll.casettes[recent_casette.my_name] = [recent_casette.my_name, recent_casette.design, recent_casette.duration, recent_casette.song_indexes]
+		_coll.write_savegame()
+	
+	
 	sort_songs(PlaylistManager.collection_library.casette_list[recent_casette.my_name].song_indexes)
 	song_selected(-1)
 

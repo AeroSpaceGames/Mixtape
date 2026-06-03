@@ -17,9 +17,8 @@ func create_groups():
 	var casette_res: Array[Casette] = PlaylistManager.collection_library.casette_list.values()
 	for i in len(casette_res):
 		var new_group = group_scene.instantiate()
-		new_group.set_data(casette_res[i])
+		new_group.set_data(casette_res[i].my_name)
 		new_group.get_node("Name").text = casette_res[i].my_name
-		new_group.get_node("Duration").text = str(casette_res[i].duration)
 		new_group.connect("casette_data", casette_songs.open_casette)
 		group_container.add_child(new_group)
 
