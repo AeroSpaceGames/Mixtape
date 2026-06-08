@@ -5,24 +5,22 @@ extends Node
 
 @export var play_mode: int = 0
 
-@export var collection_library: CasetteCollection = CasetteCollection.new()
+@export var mix_library: MixCollection = MixCollection.new()
 var designs: Array = [0,1,2]
 
-var selected_casette: String = ""
+var selected_mix: String = "Auto"
 
-func add_casette(nm: String, res: Casette):
-	collection_library.casette_list[nm] = res
+func add_mixtape(nm: String, res: Mixtape):
+	mix_library.mixtape_list[nm] = res
 
 
 func generate_playlist(songs: Array):
 	actual_playlist = []
 	#actual_playlist.append([AudioManager.selected_song, AudioManager.selected_author])
 	
-	for i in range(1, len(songs) * 2):
+	for i in range(len(songs) * 2):
 		var next_song: Song = AudioManager.song_library.songs_list.values()[songs[i % (len(songs))]]
 		actual_playlist.append([next_song.name, next_song.author])
-	
-	print(actual_playlist)
 	
 	playlist_index = 0
 

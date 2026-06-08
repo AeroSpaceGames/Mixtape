@@ -6,6 +6,8 @@ extends Control
 @onready var seconds: Timer = $Seconds
 @onready var time_preview: HSlider = $TimePreview
 @onready var play_mode: Button = $PlayMode
+@onready var total_duration: Label = %TotalDuration
+@onready var actual_secs: Label = %ActualSecs
 
 func _ready() -> void:
 	AudioManager.connect("song_ended", restart_playlist)
@@ -29,12 +31,14 @@ func set_song(data: Song):
 	seconds.start(1)
 	time_preview.value = 0
 	time_preview.max_value = data.duration
+	total_duration.text = str(int(time_preview.max_value))
 	my_name.text = data.name
 	author.text = data.author
 	pause.text = "pause"
 
 func second_passed():
 	time_preview.value += 1
+	actual_secs.text = str(int(time_preview.value))
 
 func move_to_second(changed: bool):
 	if changed:
@@ -59,3 +63,7 @@ func prev_song():
 		var new_song: Song = PlaylistManager.get_next_song(-1)
 		TrackManager.change_song(new_song.name, new_song.author)
 		set_song(AudioManager.song_library.get_song(AudioManager.selected_song,AudioManager.selected_author))
+
+
+func _on_time_preview_value_changed(value: float) -> void:
+	actual_secs.text = str(int(value))

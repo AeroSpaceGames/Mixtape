@@ -10,7 +10,7 @@ signal text_changed(txt: String)
 func _ready() -> void:
 	hide()
 
-func show_casette():
+func show_mix():
 	title.text = "Casette's Name"
 	line_edit.placeholder_text = "My Casette"
 	line_edit.text = ""

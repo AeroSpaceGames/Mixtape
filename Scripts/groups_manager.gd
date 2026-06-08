@@ -13,14 +13,15 @@ func create_groups():
 	
 	await get_tree().create_timer(0.2).timeout
 	
-	var song_res: Array[Song] = AudioManager.song_library.songs_list.values()
-	for i in len(song_res):
-		var new_group = group_scene.instantiate()
-		new_group.get_node("Name").text = song_res[i].name
-		new_group.get_node("Author").text = song_res[i].author
-		new_group.connect("play_me", TrackManager.send_song)
-		new_group.connect("play_me", _set_current)
-		group_container.add_child(new_group)
+	if PlaylistManager.mix_library.mixtape_list.keys().has("Auto"):
+		var song_res: Array = PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes
+		for i in len(song_res):
+			var new_group = group_scene.instantiate()
+			new_group.get_node("Name").text = AudioManager.song_library.songs_list.values()[song_res[i]].name
+			new_group.get_node("Author").text = AudioManager.song_library.songs_list.values()[song_res[i]].author
+			new_group.connect("play_me", TrackManager.send_song)
+			new_group.connect("play_me", _set_current)
+			group_container.add_child(new_group)
 
 func _set_current(nm: String, auth: String):
 	current_song.set_song(AudioManager.song_library.get_song(nm, auth))

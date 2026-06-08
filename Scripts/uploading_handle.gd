@@ -3,10 +3,12 @@ extends Node
 @onready var file_dialog: FileDialog = %FileDialog
 @onready var edit_song_data: Control = %TextEdit
 @onready var group_handle: Node = %GroupHandle
+@onready var mixes_groups: Node = %MixesGroups
 
 signal my_file(nm: String, auth: String)
 
 var _lib: LibrarySave
+var _coll: CollectionSave
 
 func open_file_manager():
 	file_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
@@ -65,6 +67,10 @@ func file_selected(path: String, autoplay: bool = true):
 	await edit_song_data.text_changed
 	file_res.author = edit_song_data.saved_name
 	file_res.path = path
+	
+	
+	
+	#Audio Manager
 	AudioManager.add_song(file_res)
 	if autoplay:
 		AudioManager.selected_song = file_res.name
@@ -80,6 +86,25 @@ func file_selected(path: String, autoplay: bool = true):
 			if i.path != "":
 				_lib.songs_key_data[i.path] = i.author
 		_lib.write_savegame()
+	
+	
+	#PlayList Auto
+	var auto_mix: Mixtape = Mixtape.new()
+	auto_mix.design = 0
+	auto_mix.duration = 0
+	auto_mix.my_name = "Auto"
+	auto_mix.song_indexes = []
+	for i in AudioManager.song_library.songs_list.keys().size():
+		auto_mix.song_indexes.append(i)
+	PlaylistManager.add_mixtape("Auto", auto_mix)
+	
+	#Save control
+	if CollectionSave.save_exists():
+		_coll = CollectionSave.load_savegame() as CollectionSave
+		_coll.mixtapes["Auto"] = [auto_mix.my_name, auto_mix.design, auto_mix.duration, auto_mix.song_indexes]
+		_coll.write_savegame()
+	mixes_groups.create_groups()
+	PlaylistManager.selected_mix = "Auto"
 	
 	group_handle.create_groups()
 

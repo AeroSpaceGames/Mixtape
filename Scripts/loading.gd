@@ -22,15 +22,25 @@ func create_or_load_saves():
 	#All mixtapes/casettes
 	if CollectionSave.save_exists():
 		_coll = CollectionSave.load_savegame() as CollectionSave
-		PlaylistManager.collection_library.casette_list = {}
-		for i in _coll.casettes.keys():
-			_coll.load_mix_from_coll(i, _coll.casettes[i])
+		#var auto_mix: Mixtape = Mixtape.new()
+		#auto_mix.design = 0
+		#auto_mix.duration = 0
+		#auto_mix.my_name = "Auto"
+		#auto_mix.song_indexes = []
+		PlaylistManager.mix_library.mixtape_list = {}
+		for i in _coll.mixtapes.keys():
+			_coll.load_mix_from_coll(i, _coll.mixtapes[i])
 	else:
 		_coll = CollectionSave.new()
-		_coll.casettes = {}
-		PlaylistManager.collection_library.casette_list = {}
+		#var auto_mix: Mixtape = Mixtape.new()
+		#auto_mix.design = 0
+		#auto_mix.duration = 0
+		#auto_mix.my_name = "Auto"
+		#auto_mix.song_indexes = []
+		PlaylistManager.mix_library.mixtape_list = {}
+		_coll.mixtapes = {}
 		_coll.write_savegame()
 
 
 func _on_load_time_timeout() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Testing.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
