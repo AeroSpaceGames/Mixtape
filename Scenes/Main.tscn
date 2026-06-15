@@ -229,7 +229,6 @@ script = ExtResource("2_vy5pj")
 
 [node name="MixtapeEdit" type="Control" parent="Utility/CanvasLayer" unique_id=1113988724]
 unique_name_in_owner = true
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -256,31 +255,18 @@ offset_bottom = 86.0
 theme_override_font_sizes/font_size = 35
 text = "Close"
 
-[node name="AddRemove" type="Button" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1264143062]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -153.0
-offset_top = 44.0
-offset_right = -88.0
-offset_bottom = 94.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 30
-text = "Add"
-
-[node name="SongSelection" type="OptionButton" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=165639587]
-unique_name_in_owner = true
+[node name="SearchBar" type="LineEdit" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1552111469]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_top = 63.0
-offset_right = 130.0
-offset_bottom = 93.0
+offset_left = -241.0
+offset_top = 166.0
+offset_right = 241.0
+offset_bottom = 223.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Search"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=692192672]
 layout_mode = 1
@@ -290,9 +276,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -272.0
-offset_top = -470.0
+offset_top = -273.0
 offset_right = 272.0
-offset_bottom = 148.0
+offset_bottom = 345.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -613,8 +599,7 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Lib" to="Utility/CanvasLayer/FlowManager" method="go_to_library"]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]
 [connection signal="button_down" from="Utility/CanvasLayer/MixtapeEdit/Close" to="Utility/CanvasLayer/MixtapeEdit" method="close_casette"]
-[connection signal="button_down" from="Utility/CanvasLayer/MixtapeEdit/AddRemove" to="Utility/CanvasLayer/MixtapeEdit" method="add_or_remove"]
-[connection signal="item_selected" from="Utility/CanvasLayer/MixtapeEdit/SongSelection" to="Utility/CanvasLayer/MixtapeEdit" method="song_selected"]
+[connection signal="text_changed" from="Utility/CanvasLayer/MixtapeEdit/SearchBar" to="Utility/CanvasLayer/MixtapeEdit" method="search_text_changed"]
 [connection signal="button_down" from="Player/CurrentSong/Pause" to="Player/CurrentSong" method="pause_resume_song"]
 [connection signal="button_down" from="Player/CurrentSong/Next" to="Player/CurrentSong" method="next_song"]
 [connection signal="button_down" from="Player/CurrentSong/Prev" to="Player/CurrentSong" method="prev_song"]

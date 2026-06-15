@@ -4,10 +4,9 @@ var group_scene = preload("res://Scenes/song_group.tscn")
 
 @onready var group_container: VBoxContainer = %SongsGroup
 @onready var current_song: Control = %CurrentSong
-@onready var song_selection: OptionButton = %SongSelection
-@onready var add_remove: Button = $AddRemove
 @onready var duration: Label = $Duration
 @onready var group_handle: Node = %GroupHandle
+@onready var search_bar: LineEdit = $SearchBar
 
 var _coll: CollectionSave
 
@@ -26,9 +25,7 @@ func open_mixtape(nm: String):
 	sort_songs(res.song_indexes)
 	recent_mixtape = res
 	show_duration()
-	load_new_songs()
 	show()
-	song_selected(0)
 
 func show_duration():
 	duration.text = "Duration: " + str(recent_mixtape.duration)
@@ -37,38 +34,51 @@ func close_casette():
 	recent_mixtape = Mixtape.new()
 	hide()
 
-func sort_songs(indexes: Array):
+func search_text_changed(txt: String):
+	txt = txt.to_lower().replace(" ","")
+	sort_songs(PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].song_indexes, txt)
+
+func sort_songs(indexes: Array, key: String = ""):
 	for d in group_container.get_children():
 		d.queue_free()
 	
-	await get_tree().create_timer(0.2).timeout
-	
+	search_result(indexes, key)
+
+func search_result(indexes: Array, key: String = ""):
 	var song_res: Array[Song] = AudioManager.song_library.songs_list.values()
 	
 	for i in indexes:
+		var index_txt = song_res[i].name.to_lower().replace(" ","")
+		if index_txt.left(clamp(len(key), 0, len(index_txt))) != key.left(clamp(len(key), 0, len(index_txt))):
+			continue
 		var new_song = group_scene.instantiate()
 		new_song.get_node("Name").text = song_res[i].name
 		new_song.get_node("Author").text = song_res[i].author
+		new_song.get_node("Add").button_pressed = true
+		new_song.my_index = i
 		new_song.in_playlist = true
-		new_song.connect("casette_me", TrackManager.send_casette)
-		new_song.connect("casette_me", _set_current)
+		new_song.connect("add_remove", add_or_remove)
+		group_container.add_child(new_song)
+	
+	for j in range(AudioManager.song_library.songs_list.size()):
+		if j in indexes:
+			continue
+		var index_txt = song_res[j].name.to_lower().replace(" ","")
+		if index_txt.left(clamp(len(key), 0, len(index_txt))) != key.left(clamp(len(key), 0, len(index_txt))):
+			continue
+		var new_song = group_scene.instantiate()
+		new_song.get_node("Name").text = "n-" + song_res[j].name
+		new_song.get_node("Author").text = song_res[j].author
+		new_song.get_node("Add").button_pressed = false
+		new_song.in_playlist = true
+		new_song.my_index = j
+		new_song.connect("add_remove", add_or_remove)
 		group_container.add_child(new_song)
 
-func load_new_songs():
-	song_selection.clear()
-	
-	for i in AudioManager.song_library.songs_list.values():
-		song_selection.add_item(i.name)
 
-func song_selected(_idx: int):
-	if !song_selection.selected in recent_mixtape.song_indexes:
-		add_remove.text = "Add"
-	else:
-		add_remove.text = "Remove"
-
-func add_or_remove():
-	var idx: int = song_selection.get_item_index(song_selection.get_selected_id())
-	if idx in recent_mixtape.song_indexes:
+func add_or_remove(idx: int):
+	var indexes = PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].song_indexes
+	if idx in indexes:
 		#remove
 		PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].song_indexes.erase(idx)
 	else:
@@ -91,9 +101,8 @@ func add_or_remove():
 		_coll.mixtapes[recent_mixtape.my_name] = [recent_mixtape.my_name, recent_mixtape.design, recent_mixtape.duration, recent_mixtape.song_indexes]
 		_coll.write_savegame()
 	
-	
+	search_bar.text = ""
 	sort_songs(PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].song_indexes)
-	song_selected(-1)
 
 
 func _set_current():
