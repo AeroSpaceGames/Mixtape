@@ -1,6 +1,6 @@
 extends Control
 
-signal play_me(nm: String, auth: String)
+signal play_me(nm: String, auth: String, md: int)
 signal add_remove(idx: int)
 
 var my_index: int = -1
@@ -21,4 +21,5 @@ func add_toggle(_toggle: bool):
 	add_remove.emit(my_index)
 
 func send_metadata():
-	play_me.emit(my_name.text, author.text)
+	play_me.emit(my_name.text, author.text, PlaylistManager.play_mode)
+	AudioManager.playing_song_index = my_index

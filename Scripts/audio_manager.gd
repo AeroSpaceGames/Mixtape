@@ -6,6 +6,7 @@ extends Control
 @export var selected_song: String = ""
 @export var selected_author: String = ""
 @export var playing: bool = false
+@export var playing_song_index: int = 0
 
 var saved_sec: float = 0.0
 

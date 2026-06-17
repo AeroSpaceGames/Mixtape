@@ -107,7 +107,7 @@ func add_or_remove(idx: int):
 
 func _set_current():
 	PlaylistManager.selected_mix = recent_mixtape.my_name
-	group_handle.create_groups()
+	group_handle.clean_groups()
 	var new_song_res: Song = AudioManager.song_library.songs_list.values()[recent_mixtape.song_indexes[0]]
 	AudioManager.play_song(new_song_res)
 	current_song.set_song(new_song_res)

@@ -106,7 +106,7 @@ func file_selected(path: String, autoplay: bool = true):
 	mixes_groups.create_groups()
 	PlaylistManager.selected_mix = "Auto"
 	
-	group_handle.create_groups()
+	group_handle.clean_groups()
 
 func scan_folder(folder_path: String):
 	var dir = DirAccess.open(folder_path)

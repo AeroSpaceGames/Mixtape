@@ -229,6 +229,7 @@ script = ExtResource("2_vy5pj")
 
 [node name="MixtapeEdit" type="Control" parent="Utility/CanvasLayer" unique_id=1113988724]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -496,17 +497,32 @@ offset_bottom = 295.0
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Player" unique_id=185358945]
+[node name="SearchBar" type="LineEdit" parent="Player" unique_id=325593303]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -148.0
+offset_right = 213.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Search"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Player" unique_id=185358945]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.684
+anchor_right = 0.5
+anchor_bottom = 0.684
 offset_left = -251.0
-offset_top = -144.0
+offset_top = -298.52002
 offset_right = 251.0
-offset_bottom = 535.0
+offset_bottom = 299.47998
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -608,6 +624,7 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 [connection signal="drag_ended" from="Player/CurrentSong/TimePreview" to="Player/CurrentSong" method="move_to_second"]
 [connection signal="value_changed" from="Player/CurrentSong/TimePreview" to="Player/CurrentSong" method="_on_time_preview_value_changed"]
 [connection signal="timeout" from="Player/CurrentSong/Seconds" to="Player/CurrentSong" method="second_passed"]
+[connection signal="text_changed" from="Player/SearchBar" to="Player/GroupHandle" method="search"]
 [connection signal="my_file" from="Player/UploadingHandle" to="Player/GroupHandle" method="_set_current"]
 [connection signal="dir_selected" from="Player/FileDialog" to="Player/UploadingHandle" method="dir_selected"]
 [connection signal="file_selected" from="Player/FileDialog" to="Player/UploadingHandle" method="file_selected"]

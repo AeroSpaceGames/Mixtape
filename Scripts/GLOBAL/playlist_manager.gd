@@ -14,16 +14,27 @@ func add_mixtape(nm: String, res: Mixtape):
 	mix_library.mixtape_list[nm] = res
 
 
-func generate_playlist(songs: Array):
-	actual_playlist = []
+func generate_playlist(songs: Array, mode: int = 0):
 	#actual_playlist.append([AudioManager.selected_song, AudioManager.selected_author])
+	if len(songs) <= 1:
+		return
 	
-	for i in range(len(songs) * 2):
-		var next_song: Song = AudioManager.song_library.songs_list.values()[songs[i % (len(songs))]]
-		actual_playlist.append([next_song.name, next_song.author])
+	actual_playlist = []
+	
+	match mode:
+		0: #Lineal Mode
+			for i in range(AudioManager.playing_song_index, len(songs) * 2): ##Fix the starting point
+				print("i ", i % (len(songs)))
+				var next_song: Song = AudioManager.song_library.songs_list.values()[songs[i % (len(songs))]]
+				actual_playlist.append([next_song.name, next_song.author])
+		1: #Random Mode
+			songs.shuffle()
+			var new_songs_order = songs
+			actual_playlist.append_array(new_songs_order)
 	
 	playlist_index = 0
 
+#region OBSOLETE/DESUSE
 func generate_random_playlist(n: int = 5):
 	if len(AudioManager.song_library.songs_list.keys()) <= 1:
 		return
@@ -42,6 +53,7 @@ func generate_random_playlist(n: int = 5):
 		actual_playlist.append([next_song.name, next_song.author])
 
 	playlist_index = 0
+#endregion
 
 func has_next_song(dir: int = 1) -> bool:
 	if playlist_index + 1 * dir > len(actual_playlist) - 1 or playlist_index + 1 * dir < 0:
