@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func restart_playlist():
 	if !PlaylistManager.has_next_song():
-		PlaylistManager.generate_playlist(PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes, 1)
+		PlaylistManager.generate_playlist(PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes, PlaylistManager.play_mode)
 	next_song()
 
 func change_play_mode():

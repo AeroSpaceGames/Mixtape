@@ -21,5 +21,5 @@ func add_toggle(_toggle: bool):
 	add_remove.emit(my_index)
 
 func send_metadata():
-	play_me.emit(my_name.text, author.text, PlaylistManager.play_mode)
 	AudioManager.playing_song_index = my_index
+	play_me.emit(my_name.text, author.text, PlaylistManager.play_mode)

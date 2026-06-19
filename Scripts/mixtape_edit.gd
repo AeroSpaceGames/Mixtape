@@ -13,7 +13,8 @@ var _coll: CollectionSave
 var recent_mixtape: Mixtape = null
 
 func _ready() -> void:
-	close_casette()
+	recent_mixtape = Mixtape.new()
+	hide()
 
 func read_mixtape(nm: String):
 	var res = PlaylistManager.mix_library.mixtape_list[nm]
@@ -31,6 +32,7 @@ func show_duration():
 	duration.text = "Duration: " + str(recent_mixtape.duration)
 
 func close_casette():
+	group_handle.clean_groups()
 	recent_mixtape = Mixtape.new()
 	hide()
 
@@ -109,6 +111,9 @@ func _set_current():
 	PlaylistManager.selected_mix = recent_mixtape.my_name
 	group_handle.clean_groups()
 	var new_song_res: Song = AudioManager.song_library.songs_list.values()[recent_mixtape.song_indexes[0]]
+	AudioManager.selected_song = new_song_res.name
+	AudioManager.selected_author = new_song_res.author
+	AudioManager.playing_song_index = 0
 	AudioManager.play_song(new_song_res)
 	current_song.set_song(new_song_res)
 	PlaylistManager.generate_playlist(recent_mixtape.song_indexes)

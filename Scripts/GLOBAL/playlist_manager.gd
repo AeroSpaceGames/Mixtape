@@ -23,14 +23,17 @@ func generate_playlist(songs: Array, mode: int = 0):
 	
 	match mode:
 		0: #Lineal Mode
-			for i in range(AudioManager.playing_song_index, len(songs) * 2): ##Fix the starting point
-				print("i ", i % (len(songs)))
+			for i in range(AudioManager.playing_song_index, len(songs) + AudioManager.playing_song_index + 1): ##Fix the starting point
 				var next_song: Song = AudioManager.song_library.songs_list.values()[songs[i % (len(songs))]]
 				actual_playlist.append([next_song.name, next_song.author])
 		1: #Random Mode
-			songs.shuffle()
-			var new_songs_order = songs
-			actual_playlist.append_array(new_songs_order)
+			var new_songs_order = []
+			for _j in 2:
+				songs.shuffle()
+				new_songs_order.append_array(songs)
+			for i in len(new_songs_order):
+				var next_song: Song = AudioManager.song_library.songs_list.values()[new_songs_order[i % len(new_songs_order)]]
+				actual_playlist.append([next_song.name, next_song.author])
 	
 	playlist_index = 0
 

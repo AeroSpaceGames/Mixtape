@@ -28,6 +28,7 @@ func create_groups(key: String = ""):
 			var new_group = group_scene.instantiate()
 			new_group.get_node("Name").text = AudioManager.song_library.songs_list.values()[song_res[i]].name
 			new_group.get_node("Author").text = AudioManager.song_library.songs_list.values()[song_res[i]].author
+			new_group.my_index = i
 			new_group.connect("play_me", TrackManager.send_song)
 			new_group.connect("play_me", _set_current)
 			group_container.add_child(new_group)
