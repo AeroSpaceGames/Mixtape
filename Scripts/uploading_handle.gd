@@ -63,9 +63,9 @@ func file_selected(path: String, autoplay: bool = true):
 	file_res.name = path.get_file().get_basename()
 	@warning_ignore("narrowing_conversion")
 	file_res.duration = file_res.stream.get_length()
-	edit_song_data.show_song(file_res)
-	await edit_song_data.text_changed
-	file_res.author = edit_song_data.saved_name
+	#edit_song_data.show_song(file_res)
+	#await edit_song_data.text_changed
+	file_res.author = "NA" #edit_song_data.saved_name
 	file_res.path = path
 	
 	
@@ -134,7 +134,7 @@ func scan_folder(folder_path: String):
 		
 		if extension in ["mp3", "ogg", "wav"]:
 			file_selected(full_path, false)
-			await edit_song_data.text_changed
+			#await edit_song_data.text_changed
 		
 		await get_tree().create_timer(0.1).timeout
 	dir.list_dir_end()
