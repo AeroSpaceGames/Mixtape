@@ -9,12 +9,17 @@ extends Control
 @onready var total_duration: Label = %TotalDuration
 @onready var actual_secs: Label = %ActualSecs
 
+@export var repeat_mode: bool = false
+
 func _ready() -> void:
 	AudioManager.connect("song_ended", restart_playlist)
 
 func restart_playlist():
-	if !PlaylistManager.has_next_song():
-		PlaylistManager.generate_playlist(PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes, PlaylistManager.play_mode)
+	if repeat_mode:
+		PlaylistManager.playlist_index -= 1
+	else:
+		if !PlaylistManager.has_next_song():
+			PlaylistManager.generate_playlist(PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes, PlaylistManager.play_mode)
 	next_song()
 
 func change_play_mode():
@@ -38,7 +43,22 @@ func set_song(data: Song):
 
 func second_passed():
 	time_preview.value += 1
-	actual_secs.text = str(int(time_preview.value))
+	actual_secs.text = from_seconds_to_clockhour(int(time_preview.value))
+
+func from_seconds_to_clockhour(secs: int) -> String:
+	var final_hour = ""
+	@warning_ignore("integer_division")
+	var hours = int(secs/3600)
+	@warning_ignore("integer_division")
+	var minutes = int(secs/60 - hours * 60)
+	var second = secs - minutes * 60
+	
+	if hours > 0:
+		final_hour = str(hours) + ":"
+	final_hour += str(minutes) + ":" if minutes >= 10 else "0" + str(minutes) + ":"
+	final_hour += str(second) if second >= 10 else "0" + str(second)
+	
+	return final_hour
 
 func move_to_second(changed: bool):
 	if changed:
@@ -66,4 +86,7 @@ func prev_song():
 
 
 func _on_time_preview_value_changed(value: float) -> void:
-	actual_secs.text = str(int(value))
+	actual_secs.text = from_seconds_to_clockhour(int(value))
+
+func set_repeat_mode(toggled: bool):
+	repeat_mode = toggled

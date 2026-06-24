@@ -20,7 +20,6 @@ func generate_playlist(songs: Array, mode: int = 0):
 		return
 	
 	actual_playlist = []
-	
 	match mode:
 		0: #Lineal Mode
 			for i in range(AudioManager.playing_song_index, len(songs) + AudioManager.playing_song_index + 1): ##Fix the starting point
@@ -36,6 +35,7 @@ func generate_playlist(songs: Array, mode: int = 0):
 				actual_playlist.append([next_song.name, next_song.author])
 	
 	playlist_index = 0
+
 
 #region OBSOLETE/DESUSE
 func generate_random_playlist(n: int = 5):
