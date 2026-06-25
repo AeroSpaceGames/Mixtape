@@ -18,7 +18,7 @@ func search(txt: String):
 	clean_groups(txt)
 
 func create_groups(key: String = ""):
-	if PlaylistManager.mix_library.mixtape_list.keys().has("Auto"):
+	if PlaylistManager.mix_library.mixtape_list.keys().has("My Library"):
 		var song_res: Array = PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes
 		for i in len(song_res):
 			var actual_name: String = AudioManager.song_library.songs_list.values()[song_res[i]].name.to_lower().replace(" ","")

@@ -39,6 +39,10 @@ folder_colors={
 "res://Scripts/": "red"
 }
 
+[global_group]
+
+SongGroup=""
+
 [input]
 
 tap={

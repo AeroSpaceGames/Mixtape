@@ -24,18 +24,25 @@ func seek_second(sec: float):
 	else:
 		saved_sec = sec
 
-func pause_resume():
+func pause():
 	if playing:
 		player.stream_paused = true
 		playing = false
-	else:
+
+func resume():
+	if !playing:
 		player.stream_paused = false
 		playing = true
 		if saved_sec != 0.0:
 			player.seek(saved_sec)
 			saved_sec = 0.0
 
+func stop_restart():
+	player.seek(0.0)
+	saved_sec = 0.0
+
 func play_song(data: Song):
+	get_tree().call_group("SongGroup", "color_selected")
 	player.stream = data.stream
 	player.play()
 	playing = player.playing

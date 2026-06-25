@@ -5,22 +5,22 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqgl6"]
 bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
-[node name="SongGroup" type="Control" unique_id=1165022880]
-custom_minimum_size = Vector2(625, 50)
+[node name="SongGroup" type="Control" unique_id=1165022880 groups=["SongGroup"]]
+custom_minimum_size = Vector2(640, 50)
 layout_mode = 3
-anchor_right = 0.86800003
+anchor_right = 0.8880001
 anchor_bottom = 0.039
-offset_right = 0.039978027
+offset_right = 0.6399536
 offset_bottom = 0.07999802
 grow_horizontal = 2
 grow_vertical = 2
@@ -32,6 +32,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_hqgl6")

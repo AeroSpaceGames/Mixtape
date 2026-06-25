@@ -11,6 +11,7 @@ var in_playlist: bool = false
 @onready var play: TextureButton = $Play
 @onready var add: CheckBox = $Add
 @onready var duration: Label = $Duration
+@onready var panel: Panel = $Panel
 
 func _ready() -> void:
 	if in_playlist:
@@ -18,8 +19,14 @@ func _ready() -> void:
 		duration.hide()
 	else:
 		add.hide()
-	
-	duration.text = from_seconds_to_clockhour(AudioManager.song_library.get_song(my_name.text, author.text).duration)
+		duration.text = from_seconds_to_clockhour(AudioManager.song_library.get_song(my_name.text, author.text).duration)
+
+func color_selected():
+	if AudioManager.selected_song == my_name.text and AudioManager.selected_author == author.text:
+		panel.self_modulate = Color(1.353, 1.353, 1.353, 1.0)
+	else:
+		panel.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+
 
 func from_seconds_to_clockhour(secs: int) -> String:
 	var final_hour = ""

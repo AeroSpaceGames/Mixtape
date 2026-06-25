@@ -1,8 +1,10 @@
 extends Control
 
+var on_play: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Released (Animation).png"), preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Pressed (Animation).png")]
+var on_pause: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Released (Animation).png"), preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Pressed (Animation).png")]
+
 @onready var my_name: Label = $Name
 @onready var author: Label = $Author
-@onready var pause: Button = $Pause
 @onready var seconds: Timer = $Seconds
 @onready var time_preview: HSlider = $TimePreview
 @onready var play_mode: Button = $PlayMode
@@ -10,6 +12,10 @@ extends Control
 @onready var actual_secs: Label = %ActualSecs
 
 @export var repeat_mode: bool = false
+
+@onready var pause: TextureButton = %Pause
+@onready var play: TextureButton = %Play
+
 
 func _ready() -> void:
 	AudioManager.connect("song_ended", restart_playlist)
@@ -39,7 +45,9 @@ func set_song(data: Song):
 	total_duration.text = str(int(time_preview.max_value))
 	my_name.text = data.name
 	author.text = data.author
-	pause.text = "pause"
+	
+	play.texture_normal = on_play[1]
+	pause.texture_normal = on_pause[0]
 
 func second_passed():
 	time_preview.value += 1
@@ -65,12 +73,27 @@ func move_to_second(changed: bool):
 		var sec = time_preview.value
 		AudioManager.seek_second(sec)
 
-func pause_resume_song():
+func pause_song():
 	if AudioManager.selected_song != "":
-		AudioManager.pause_resume()
-		pause.text = "pause" if AudioManager.playing else "play"
-		if !AudioManager.playing: seconds.paused = true
-		else: seconds.paused = false
+		AudioManager.pause()
+		seconds.paused = true
+	play.texture_normal = on_play[int(AudioManager.playing)]
+	pause.texture_normal = on_pause[int(!AudioManager.playing)]
+
+func resume_song():
+	if AudioManager.selected_song != "":
+		seconds.paused = false
+		AudioManager.resume()
+	play.texture_normal = on_play[int(AudioManager.playing)]
+	pause.texture_normal = on_pause[int(!AudioManager.playing)]
+
+func stop_restart_song():
+	if AudioManager.selected_song != "":
+		time_preview.value = 0.0
+		actual_secs.text = from_seconds_to_clockhour(int(time_preview.value))
+		AudioManager.stop_restart()
+	play.texture_normal = on_play[int(AudioManager.playing)]
+	pause.texture_normal = on_pause[int(!AudioManager.playing)]
 
 func next_song():
 	if AudioManager.selected_song != "" and PlaylistManager.has_next_song():

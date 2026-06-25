@@ -8,7 +8,7 @@ extends Node
 @export var mix_library: MixCollection = MixCollection.new()
 var designs: Array = [0,1,2]
 
-var selected_mix: String = "Auto"
+var selected_mix: String = "My Library"
 
 func add_mixtape(nm: String, res: Mixtape):
 	mix_library.mixtape_list[nm] = res

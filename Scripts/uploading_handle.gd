@@ -92,19 +92,19 @@ func file_selected(path: String, autoplay: bool = true):
 	var auto_mix: Mixtape = Mixtape.new()
 	auto_mix.design = 0
 	auto_mix.duration = 0
-	auto_mix.my_name = "Auto"
+	auto_mix.my_name = "My Library"
 	auto_mix.song_indexes = []
 	for i in AudioManager.song_library.songs_list.keys().size():
 		auto_mix.song_indexes.append(i)
-	PlaylistManager.add_mixtape("Auto", auto_mix)
+	PlaylistManager.add_mixtape("My Library", auto_mix)
 	
 	#Save control
 	if CollectionSave.save_exists():
 		_coll = CollectionSave.load_savegame() as CollectionSave
-		_coll.mixtapes["Auto"] = [auto_mix.my_name, auto_mix.design, auto_mix.duration, auto_mix.song_indexes]
+		_coll.mixtapes["My Library"] = [auto_mix.my_name, auto_mix.design, auto_mix.duration, auto_mix.song_indexes]
 		_coll.write_savegame()
 	mixes_groups.create_groups()
-	PlaylistManager.selected_mix = "Auto"
+	PlaylistManager.selected_mix = "My Library"
 	
 	group_handle.clean_groups()
 

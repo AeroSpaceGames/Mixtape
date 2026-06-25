@@ -1,17 +1,68 @@
 [gd_scene format=3 uid="uid://cfvlt64f0csp5"]
 
-[ext_resource type="Texture2D" uid="uid://cr6mha6xfxe6s" path="res://Asssets/PNG/Mixtape Assets/Mixtape Screen/Background_General.png" id="1_4kpch"]
 [ext_resource type="Script" uid="uid://cya2f8fptut6" path="res://Scripts/edit_song_data.gd" id="1_50glp"]
+[ext_resource type="Texture2D" uid="uid://c2kdifgjm5hud" path="res://Asssets/PNG/New Assets MixTape/Background_General.png" id="1_grg3l"]
 [ext_resource type="Texture2D" uid="uid://cgq0f3cmyarmu" path="res://Asssets/PNG/Mixtape Assets/General Items/Logo.png" id="2_bmxlf"]
 [ext_resource type="Script" uid="uid://bfqicc7dgf36p" path="res://Scripts/flow_manager.gd" id="2_vy5pj"]
 [ext_resource type="Script" uid="uid://gmm3tnh67mru" path="res://Scripts/mixtape_edit.gd" id="3_bmxlf"]
 [ext_resource type="Script" uid="uid://cqlduviglf3v4" path="res://Scripts/current_song.gd" id="4_4kpch"]
 [ext_resource type="Script" uid="uid://bfubgp4hj7vf6" path="res://Scripts/groups_manager.gd" id="5_grg3l"]
-[ext_resource type="Texture2D" uid="uid://bpdcyp6fwr6f5" path="res://Asssets/PNG/Mixtape Assets/Player Screen/Player_Screen_Backgorund.png" id="6_4kpch"]
+[ext_resource type="Texture2D" uid="uid://b3xw7jr786xt2" path="res://Asssets/PNG/New Assets MixTape/Backgorund (Player modelo).png" id="6_1p5hy"]
 [ext_resource type="Script" uid="uid://yja2escdyw7r" path="res://Scripts/uploading_handle.gd" id="6_frkhe"]
 [ext_resource type="Script" uid="uid://d4fotw58gln82" path="res://Scripts/mixes_groups.gd" id="7_1p5hy"]
 [ext_resource type="Theme" uid="uid://d3cauhlc30q8o" path="res://Asssets/Fonts/MainTheme.tres" id="8_grg3l"]
 [ext_resource type="Script" uid="uid://bnx6jhmsq1mlg" path="res://Scripts/mixes_handler.gd" id="8_h1m7h"]
+[ext_resource type="Texture2D" uid="uid://b3vaf6okm5acl" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Prev_Button_Released (Animation).png" id="9_2w5on"]
+[ext_resource type="Texture2D" uid="uid://b6l5u4q2iyrkn" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Released (Animation).png" id="10_346fj"]
+[ext_resource type="Texture2D" uid="uid://cjuasufcvs342" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Prev_Button_Pressed (Animation).png" id="10_hwpts"]
+[ext_resource type="Texture2D" uid="uid://c0tyel12rnuo" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stop_Button_Released (Animation).png" id="11_0sclb"]
+[ext_resource type="Texture2D" uid="uid://ctax5cvqh7acq" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Pressed (Animation).png" id="12_jyqft"]
+[ext_resource type="Texture2D" uid="uid://qx0d2ahtiyao" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Released (Animation).png" id="12_sxkr1"]
+[ext_resource type="Texture2D" uid="uid://b8py6btoj8w30" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Next_Button_Released (Animation).png" id="13_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://b1ifgp15aki1s" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stop_Button_Pressed (Animation).png" id="14_3tgeq"]
+[ext_resource type="Texture2D" uid="uid://ci8e4sbqgi81s" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Pressed (Animation).png" id="16_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://ckg2q54gkp7j1" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Next_Button_Pressed (Animation).png" id="18_aht7i"]
+[ext_resource type="Texture2D" uid="uid://bsdo8g6rrv50f" path="res://Asssets/PNG/New Assets MixTape/Cassette_Base_ok.png" id="19_jyqft"]
+[ext_resource type="Texture2D" uid="uid://xn1d5ahpt2tr" path="res://Asssets/PNG/Mixtape Assets/General Items/Tape_L (Animation).png" id="20_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://dp7ilj2j6b3x1" path="res://Asssets/PNG/Mixtape Assets/General Items/Tape_R (Animation).png" id="21_aht7i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p5hy"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w5on"]
+bg_color = Color(0.07450981, 0.11372549, 0.15686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grg3l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frkhe"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1m7h"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="Animation" id="Animation_4y0hx"]
 resource_name = "Collection"
@@ -120,26 +171,30 @@ offset_bottom = 40.0
 layer = -1
 
 [node name="BG" type="TextureRect" parent="Utility/Background" unique_id=157818620]
-offset_right = 720.0
-offset_bottom = 1280.0
-texture = ExtResource("1_4kpch")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_grg3l")
+stretch_mode = 3
 
-[node name="Title" type="TextureRect" parent="Utility/Background" unique_id=515795075]
+[node name="CanvasLayer" type="CanvasLayer" parent="Utility" unique_id=1274205428]
+
+[node name="Title" type="TextureRect" parent="Utility/CanvasLayer" unique_id=515795075]
 custom_minimum_size = Vector2(235, 80)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -117.5
-offset_top = 42.0
+offset_top = 27.0
 offset_right = 117.5
-offset_bottom = 122.0
+offset_bottom = 107.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_bmxlf")
 expand_mode = 1
 stretch_mode = 4
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Utility" unique_id=1274205428]
 
 [node name="TextEdit" type="Control" parent="Utility/CanvasLayer" unique_id=1493723930]
 unique_name_in_owner = true
@@ -342,27 +397,41 @@ offset_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Control" type="Control" parent="Player" unique_id=691876563]
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 739.0
+offset_right = 680.0
+offset_bottom = 1136.0
+
 [node name="BG_FAKE" type="TextureRect" parent="Player" unique_id=505673528]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = -1.036
+anchor_right = -0.036000002
 anchor_bottom = 1.0
-offset_left = -666.0
-offset_top = 14.0
-offset_right = -763.0
-offset_bottom = 17.0
-grow_horizontal = 2
+offset_left = -0.08001709
+offset_right = -0.07999802
+grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("6_4kpch")
+texture = ExtResource("6_1p5hy")
 expand_mode = 1
 
-[node name="SearchBG" type="Panel" parent="Player" unique_id=902564212]
-layout_mode = 0
-offset_left = 46.0
-offset_top = 761.0
-offset_right = 673.0
-offset_bottom = 1149.0
+[node name="PanelUp" type="Panel" parent="Player" unique_id=522377624]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.577
+anchor_right = 0.947
+anchor_bottom = 0.632
+offset_left = 0.11999893
+offset_top = 0.4399414
+offset_right = 0.15997314
+offset_bottom = -1.960022
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p5hy")
 
 [node name="CurrentSong" type="Control" parent="Player" unique_id=1784813829]
 unique_name_in_owner = true
@@ -373,25 +442,21 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -311.0
-offset_top = -654.0
-offset_right = 311.0
-offset_bottom = -530.0
+offset_left = -322.0
+offset_top = -671.0
+offset_right = 322.0
+offset_bottom = -547.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_4kpch")
 
 [node name="Panel" type="Panel" parent="Player/CurrentSong" unique_id=365714272]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -314.0
-offset_top = -62.0
-offset_right = 314.0
-offset_bottom = 62.0
+anchors_preset = -1
+anchor_right = 0.99700004
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = -0.0680542
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
@@ -408,7 +473,7 @@ offset_bottom = 70.0
 grow_horizontal = 2
 theme = ExtResource("8_grg3l")
 theme_override_font_sizes/font_size = 25
-text = "SongName"
+text = "No Song"
 vertical_alignment = 1
 
 [node name="Author" type="Label" parent="Player/CurrentSong" unique_id=301255117]
@@ -428,53 +493,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Author"
 horizontal_alignment = 1
-
-[node name="Pause" type="Button" parent="Player/CurrentSong" unique_id=1078494444]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -61.0
-offset_top = -208.0
-offset_right = 48.0
-offset_bottom = -151.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 35
-
-[node name="Next" type="Button" parent="Player/CurrentSong" unique_id=2118802961]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 181.0
-offset_top = -208.0
-offset_right = 290.0
-offset_bottom = -151.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 35
-text = "Next"
-
-[node name="Prev" type="Button" parent="Player/CurrentSong" unique_id=2083393901]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -298.0
-offset_top = -213.0
-offset_right = -189.0
-offset_bottom = -156.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 35
-text = "Prev"
 
 [node name="Upload" type="Button" parent="Player/CurrentSong" unique_id=549232287]
 visible = false
@@ -496,10 +514,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -148.0
-offset_top = 78.0
-offset_right = -33.0
-offset_bottom = 118.0
+offset_left = -166.0
+offset_top = 96.0
+offset_right = -51.0
+offset_bottom = 136.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 23
@@ -513,9 +531,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 129.0
-offset_top = -250.0
+offset_top = -264.0
 offset_right = 244.0
-offset_bottom = -193.0
+offset_bottom = -207.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 35
@@ -551,14 +569,13 @@ horizontal_alignment = 1
 [node name="ActualSecs" type="Label" parent="Player/CurrentSong" unique_id=658322342]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 509.0
+offset_left = 485.0
 offset_top = 38.0
 offset_right = 606.0
-offset_bottom = 66.0
+offset_bottom = 73.0
 theme = ExtResource("8_grg3l")
 theme_override_colors/font_color = Color(0.3647059, 0.54509807, 0.6509804, 1)
-theme_override_font_sizes/font_size = 20
-text = "1:23"
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -580,6 +597,74 @@ offset_right = 224.0
 offset_bottom = -130.0
 text = "Repeat"
 
+[node name="ButtonsBG" type="Panel" parent="Player/CurrentSong" unique_id=1910503028]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -133.0
+offset_right = 642.0
+offset_bottom = -20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2w5on")
+
+[node name="CasetteButtons" type="HBoxContainer" parent="Player/CurrentSong" unique_id=191539335]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.0
+offset_top = -133.0
+offset_right = 320.0
+offset_bottom = -20.0
+grow_horizontal = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Prev" type="TextureButton" parent="Player/CurrentSong/CasetteButtons" unique_id=1526956601]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("9_2w5on")
+texture_pressed = ExtResource("10_hwpts")
+texture_hover = ExtResource("10_hwpts")
+texture_disabled = ExtResource("9_2w5on")
+texture_focused = ExtResource("10_hwpts")
+
+[node name="Play" type="TextureButton" parent="Player/CurrentSong/CasetteButtons" unique_id=1920469969]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("10_346fj")
+texture_pressed = ExtResource("12_jyqft")
+texture_hover = ExtResource("12_jyqft")
+texture_disabled = ExtResource("10_346fj")
+texture_focused = ExtResource("12_jyqft")
+
+[node name="Stop" type="TextureButton" parent="Player/CurrentSong/CasetteButtons" unique_id=707901557]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("11_0sclb")
+texture_pressed = ExtResource("14_3tgeq")
+texture_hover = ExtResource("14_3tgeq")
+texture_disabled = ExtResource("11_0sclb")
+texture_focused = ExtResource("14_3tgeq")
+
+[node name="Pause" type="TextureButton" parent="Player/CurrentSong/CasetteButtons" unique_id=653115133]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("12_sxkr1")
+texture_pressed = ExtResource("16_c4ay3")
+texture_hover = ExtResource("16_c4ay3")
+texture_disabled = ExtResource("12_sxkr1")
+texture_focused = ExtResource("16_c4ay3")
+
+[node name="Next" type="TextureButton" parent="Player/CurrentSong/CasetteButtons" unique_id=258640352]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("13_fq0cl")
+texture_pressed = ExtResource("18_aht7i")
+texture_hover = ExtResource("18_aht7i")
+texture_disabled = ExtResource("13_fq0cl")
+texture_focused = ExtResource("18_aht7i")
+
 [node name="SearchBar" type="LineEdit" parent="Player" unique_id=325593303]
 layout_mode = 1
 anchors_preset = 8
@@ -587,15 +672,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -245.0
-offset_top = 130.0
-offset_right = 114.0
-offset_bottom = 168.0
+offset_left = -251.0
+offset_top = 117.0
+offset_right = 108.0
+offset_bottom = 155.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
 theme_override_colors/font_color = Color(0.3647059, 0.54509807, 0.6509804, 1)
 theme_override_colors/font_placeholder_color = Color(0.3647059, 0.54509807, 0.6509804, 0.23529412)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_grg3l")
 placeholder_text = "Search"
 
 [node name="ColorRect" type="ColorRect" parent="Player/SearchBar" unique_id=1051302671]
@@ -617,10 +703,10 @@ anchor_left = 0.5
 anchor_top = 0.684
 anchor_right = 0.5
 anchor_bottom = 0.684
-offset_left = -314.0
-offset_top = -56.52002
-offset_right = 313.0
-offset_bottom = 273.47998
+offset_left = -321.0
+offset_top = -68.52002
+offset_right = 322.0
+offset_bottom = 260.47998
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
@@ -633,6 +719,107 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
+
+[node name="PanelBG" type="Panel" parent="Player" unique_id=860401667]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.88000005
+anchor_right = 0.947
+anchor_bottom = 0.887
+offset_left = 0.11999893
+offset_top = -0.4000244
+offset_right = 0.15997314
+offset_bottom = 0.64001465
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_frkhe")
+
+[node name="PanelDown" type="Panel" parent="Player" unique_id=1012536283]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.87100005
+anchor_right = 0.947
+anchor_bottom = 0.887
+offset_left = 0.11999893
+offset_top = 0.11987305
+offset_right = 0.15997314
+offset_bottom = 0.64001465
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1m7h")
+
+[node name="MixCasette" type="Control" parent="Player" unique_id=2028515876]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 109.0
+offset_right = 720.0
+offset_bottom = 407.0
+
+[node name="Base" type="TextureRect" parent="Player/MixCasette" unique_id=1952568725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -147.0
+offset_right = 230.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_jyqft")
+
+[node name="Roller1" type="TextureRect" parent="Player/MixCasette" unique_id=1642354141]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -147.0
+offset_right = 230.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_c4ay3")
+
+[node name="Roller2" type="TextureRect" parent="Player/MixCasette" unique_id=1664531999]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -147.0
+offset_right = 230.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_aht7i")
+
+[node name="Label" type="TextureRect" parent="Player/MixCasette" unique_id=1006727500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -147.0
+offset_right = 230.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_jyqft")
 
 [node name="GroupHandle" type="Node" parent="Player" unique_id=1200405772]
 unique_name_in_owner = true
@@ -678,9 +865,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 105.0
-offset_top = 150.0
+offset_top = 166.0
 offset_right = 272.0
-offset_bottom = 193.0
+offset_bottom = 209.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 text = "New Mixtape"
@@ -719,9 +906,6 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]
 [connection signal="button_down" from="Utility/CanvasLayer/MixtapeEdit/Close" to="Utility/CanvasLayer/MixtapeEdit" method="close_casette"]
 [connection signal="text_changed" from="Utility/CanvasLayer/MixtapeEdit/SearchBar" to="Utility/CanvasLayer/MixtapeEdit" method="search_text_changed"]
-[connection signal="button_down" from="Player/CurrentSong/Pause" to="Player/CurrentSong" method="pause_resume_song"]
-[connection signal="button_down" from="Player/CurrentSong/Next" to="Player/CurrentSong" method="next_song"]
-[connection signal="button_down" from="Player/CurrentSong/Prev" to="Player/CurrentSong" method="prev_song"]
 [connection signal="button_down" from="Player/CurrentSong/Upload" to="Player/UploadingHandle" method="open_file_manager"]
 [connection signal="button_down" from="Player/CurrentSong/UploadFolder" to="Player/UploadingHandle" method="open_folder_manager"]
 [connection signal="button_down" from="Player/CurrentSong/PlayMode" to="Player/CurrentSong" method="change_play_mode"]
@@ -729,6 +913,11 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 [connection signal="value_changed" from="Player/CurrentSong/TimePreview" to="Player/CurrentSong" method="_on_time_preview_value_changed"]
 [connection signal="timeout" from="Player/CurrentSong/Seconds" to="Player/CurrentSong" method="second_passed"]
 [connection signal="toggled" from="Player/CurrentSong/Repeat" to="Player/CurrentSong" method="set_repeat_mode"]
+[connection signal="button_down" from="Player/CurrentSong/CasetteButtons/Prev" to="Player/CurrentSong" method="prev_song"]
+[connection signal="button_down" from="Player/CurrentSong/CasetteButtons/Play" to="Player/CurrentSong" method="resume_song"]
+[connection signal="button_down" from="Player/CurrentSong/CasetteButtons/Stop" to="Player/CurrentSong" method="stop_restart_song"]
+[connection signal="button_down" from="Player/CurrentSong/CasetteButtons/Pause" to="Player/CurrentSong" method="pause_song"]
+[connection signal="button_down" from="Player/CurrentSong/CasetteButtons/Next" to="Player/CurrentSong" method="next_song"]
 [connection signal="text_changed" from="Player/SearchBar" to="Player/GroupHandle" method="search"]
 [connection signal="my_file" from="Player/UploadingHandle" to="Player/GroupHandle" method="_set_current"]
 [connection signal="dir_selected" from="Player/FileDialog" to="Player/UploadingHandle" method="dir_selected"]
