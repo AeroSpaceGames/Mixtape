@@ -77,7 +77,7 @@ func file_selected(path: String, autoplay: bool = true):
 		AudioManager.selected_author = file_res.author
 		var new_song_res: Song = AudioManager.song_library.get_song(file_res.name, file_res.author)
 		AudioManager.play_song(new_song_res)
-		PlaylistManager.generate_random_playlist()
+		#PlaylistManager.generate_random_playlist()
 		my_file.emit(file_res.name, file_res.author)
 	 
 	if LibrarySave.save_exists():
@@ -96,6 +96,7 @@ func file_selected(path: String, autoplay: bool = true):
 	auto_mix.song_indexes = []
 	for i in AudioManager.song_library.songs_list.keys().size():
 		auto_mix.song_indexes.append(i)
+		auto_mix.duration += AudioManager.song_library.songs_list.values()[i].duration
 	PlaylistManager.add_mixtape("My Library", auto_mix)
 	
 	#Save control

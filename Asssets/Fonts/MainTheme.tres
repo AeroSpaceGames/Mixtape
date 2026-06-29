@@ -72,6 +72,7 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_iwaix")
 HSlider/styles/slider = SubResource("StyleBoxTexture_vvjgj")
 Label/colors/font_color = Color(0.8117647, 0.80784315, 0.78039217, 1)
 Label/font_sizes/font_size = 13
+Label/fonts/font = null
 LineEdit/colors/font_color = Color(0.8117647, 0.80784315, 0.78039217, 1)
 LineEdit/font_sizes/font_size = 20
 LineEdit/styles/normal = SubResource("StyleBoxFlat_vef3l")

@@ -6,25 +6,62 @@
 [ext_resource type="Script" uid="uid://bfqicc7dgf36p" path="res://Scripts/flow_manager.gd" id="2_vy5pj"]
 [ext_resource type="Script" uid="uid://gmm3tnh67mru" path="res://Scripts/mixtape_edit.gd" id="3_bmxlf"]
 [ext_resource type="Script" uid="uid://cqlduviglf3v4" path="res://Scripts/current_song.gd" id="4_4kpch"]
+[ext_resource type="Texture2D" uid="uid://d0epfrdcva1li" path="res://Asssets/PNG/New Assets MixTape/Player_Button_Released_(Animation).png" id="4_btbly"]
 [ext_resource type="Script" uid="uid://bfubgp4hj7vf6" path="res://Scripts/groups_manager.gd" id="5_grg3l"]
+[ext_resource type="Texture2D" uid="uid://cq3fr3uskgq0j" path="res://Asssets/PNG/New Assets MixTape/Player_Button_Pressed_(Animation).png" id="5_vs04g"]
 [ext_resource type="Texture2D" uid="uid://b3xw7jr786xt2" path="res://Asssets/PNG/New Assets MixTape/Backgorund (Player modelo).png" id="6_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://c5tmcfbu2u8gy" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Button_Released_(Animation).png" id="6_6ehlx"]
 [ext_resource type="Script" uid="uid://yja2escdyw7r" path="res://Scripts/uploading_handle.gd" id="6_frkhe"]
 [ext_resource type="Script" uid="uid://d4fotw58gln82" path="res://Scripts/mixes_groups.gd" id="7_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://cbburo3g2rdm7" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Button_Pressed_(Animation).png" id="7_utia5"]
+[ext_resource type="Texture2D" uid="uid://4ckgmqmpm6u7" path="res://Asssets/PNG/New Assets MixTape/Stereo Cassette Logo.png" id="8_4yxf6"]
 [ext_resource type="Theme" uid="uid://d3cauhlc30q8o" path="res://Asssets/Fonts/MainTheme.tres" id="8_grg3l"]
 [ext_resource type="Script" uid="uid://bnx6jhmsq1mlg" path="res://Scripts/mixes_handler.gd" id="8_h1m7h"]
+[ext_resource type="Texture2D" uid="uid://6mep6yw30jy0" path="res://Asssets/PNG/New Assets MixTape/Led_Off_(Playing_Animation).png" id="8_u7mjy"]
 [ext_resource type="Texture2D" uid="uid://b3vaf6okm5acl" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Prev_Button_Released (Animation).png" id="9_2w5on"]
+[ext_resource type="Texture2D" uid="uid://c8k0sorwgneb4" path="res://Asssets/PNG/New Assets MixTape/Punto de Rodamiento.png" id="9_4n42c"]
+[ext_resource type="Texture2D" uid="uid://cnoalp4jlhlp5" path="res://Asssets/PNG/New Assets MixTape/Repeat_Button_On (Animation).png" id="9_5jffn"]
+[ext_resource type="Texture2D" uid="uid://boyk5mfpbygev" path="res://Asssets/PNG/New Assets MixTape/In Order_Mode_Button.png" id="9_kpo4j"]
 [ext_resource type="Texture2D" uid="uid://b6l5u4q2iyrkn" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Released (Animation).png" id="10_346fj"]
 [ext_resource type="Texture2D" uid="uid://cjuasufcvs342" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Prev_Button_Pressed (Animation).png" id="10_hwpts"]
+[ext_resource type="Texture2D" uid="uid://dwqjdkh1dgurs" path="res://Asssets/PNG/New Assets MixTape/Repeat_Button_Off (Animation).png" id="10_kpo4j"]
 [ext_resource type="Texture2D" uid="uid://c0tyel12rnuo" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stop_Button_Released (Animation).png" id="11_0sclb"]
+[ext_resource type="Texture2D" uid="uid://c0yaf823hsa0d" path="res://Asssets/PNG/New Assets MixTape/Label_1.png" id="11_4n42c"]
+[ext_resource type="Texture2D" uid="uid://dh3g8dil1rlou" path="res://Asssets/PNG/New Assets MixTape/Tape.png" id="11_4yxf6"]
+[ext_resource type="Texture2D" uid="uid://bg52ywtije0wv" path="res://Asssets/PNG/New Assets MixTape/Speaker.png" id="12_c5snn"]
 [ext_resource type="Texture2D" uid="uid://ctax5cvqh7acq" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Pressed (Animation).png" id="12_jyqft"]
 [ext_resource type="Texture2D" uid="uid://qx0d2ahtiyao" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Released (Animation).png" id="12_sxkr1"]
 [ext_resource type="Texture2D" uid="uid://b8py6btoj8w30" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Next_Button_Released (Animation).png" id="13_fq0cl"]
 [ext_resource type="Texture2D" uid="uid://b1ifgp15aki1s" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stop_Button_Pressed (Animation).png" id="14_3tgeq"]
 [ext_resource type="Texture2D" uid="uid://ci8e4sbqgi81s" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Pressed (Animation).png" id="16_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://bk74se8128njl" path="res://Asssets/PNG/New Assets MixTape/Add_Tracks_Button.png" id="16_qta6b"]
 [ext_resource type="Texture2D" uid="uid://ckg2q54gkp7j1" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Next_Button_Pressed (Animation).png" id="18_aht7i"]
 [ext_resource type="Texture2D" uid="uid://bsdo8g6rrv50f" path="res://Asssets/PNG/New Assets MixTape/Cassette_Base_ok.png" id="19_jyqft"]
-[ext_resource type="Texture2D" uid="uid://xn1d5ahpt2tr" path="res://Asssets/PNG/Mixtape Assets/General Items/Tape_L (Animation).png" id="20_c4ay3"]
-[ext_resource type="Texture2D" uid="uid://dp7ilj2j6b3x1" path="res://Asssets/PNG/Mixtape Assets/General Items/Tape_R (Animation).png" id="21_aht7i"]
+[ext_resource type="Texture2D" uid="uid://b61gva7x4sb26" path="res://Asssets/PNG/New Assets MixTape/Search Icon.png" id="27_xvtyr"]
+[ext_resource type="Texture2D" uid="uid://bmyuiwsorlby3" path="res://Asssets/PNG/New Assets MixTape/New_Mixtape_Button.png" id="37_vs04g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btbly"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4ay3"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p5hy"]
 bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
@@ -43,6 +80,229 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_vs04g"]
+resource_name = "Next"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.7, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.7, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="Animation" id="Animation_4yxf6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_btbly"]
+resource_name = "Restart"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [6.2831855, 0.5235987755982988, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [6.283185307179586, 0.5235987755982988, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qta6b"]
+resource_name = "Roll"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_vvnwx"]
+resource_name = "Starting"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 0.5),
+"update": 0,
+"values": [0.0, 0.5235987755982988, 1.5707963267948966]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 0.5),
+"update": 0,
+"values": [0.0, 0.5235987755982988, 1.5707963267948966]
+}
+
+[sub_resource type="Animation" id="Animation_x3rx7"]
+resource_name = "Stop"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6heos"]
+resource_name = "Stopping"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RollerR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [4.71238898038469, 5.759586531581287, 6.283185307179586]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RollerL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [4.71238898038469, 5.759586531581287, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vvnwx"]
+_data = {
+&"Next": SubResource("Animation_vs04g"),
+&"RESET": SubResource("Animation_4yxf6"),
+&"Restart": SubResource("Animation_btbly"),
+&"Roll": SubResource("Animation_qta6b"),
+&"Starting": SubResource("Animation_vvnwx"),
+&"Stop": SubResource("Animation_x3rx7"),
+&"Stopping": SubResource("Animation_6heos")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aht7i"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[sub_resource type="Theme" id="Theme_4n42c"]
+CheckBox/icons/checked = ExtResource("9_5jffn")
+CheckBox/icons/unchecked = ExtResource("10_kpo4j")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grg3l"]
 
@@ -63,6 +323,15 @@ border_width_bottom = 2
 border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs04g"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
 
 [sub_resource type="Animation" id="Animation_4y0hx"]
 resource_name = "Collection"
@@ -181,21 +450,6 @@ stretch_mode = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Utility" unique_id=1274205428]
 
-[node name="Title" type="TextureRect" parent="Utility/CanvasLayer" unique_id=515795075]
-custom_minimum_size = Vector2(235, 80)
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -117.5
-offset_top = 27.0
-offset_right = 117.5
-offset_bottom = 107.0
-grow_horizontal = 2
-size_flags_horizontal = 3
-texture = ExtResource("2_bmxlf")
-expand_mode = 1
-stretch_mode = 4
-
 [node name="TextEdit" type="Control" parent="Utility/CanvasLayer" unique_id=1493723930]
 unique_name_in_owner = true
 visible = false
@@ -281,37 +535,8 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "OK"
 
-[node name="TabsContainer" type="HBoxContainer" parent="Utility/CanvasLayer" unique_id=703601310]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -225.0
-offset_top = -77.0
-offset_right = 225.0
-offset_bottom = -34.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 100
-alignment = 1
-
-[node name="Lib" type="Button" parent="Utility/CanvasLayer/TabsContainer" unique_id=1415264409]
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Library"
-
-[node name="Coll" type="Button" parent="Utility/CanvasLayer/TabsContainer" unique_id=2111106783]
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Collection"
-
-[node name="FlowManager" type="Node" parent="Utility/CanvasLayer" unique_id=1305071637]
-script = ExtResource("2_vy5pj")
-
 [node name="MixtapeEdit" type="Control" parent="Utility/CanvasLayer" unique_id=1113988724]
 unique_name_in_owner = true
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -320,21 +545,127 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_bmxlf")
 
-[node name="Background" type="ColorRect" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=25792688]
+[node name="Background" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=704126604]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+texture = ExtResource("1_grg3l")
+
+[node name="BigBorder" type="Panel" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=225292907]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -542.0
+offset_right = 320.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_btbly")
+
+[node name="Casette" type="Control" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1246702834]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 119.0
+offset_right = 229.0
+offset_bottom = 413.0
+grow_horizontal = 2
+
+[node name="RollPointR" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=690148248]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 113.0
+offset_right = 346.0
+offset_bottom = 144.0
+texture = ExtResource("9_4n42c")
+
+[node name="RollPointL" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=547929844]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 114.0
+offset_right = 150.0
+offset_bottom = 145.0
+texture = ExtResource("9_4n42c")
+
+[node name="RollerR" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=1094860741]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 33.333374
+offset_top = -84.77779
+offset_right = 167.33337
+offset_bottom = 49.222214
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(67, 67)
+texture = ExtResource("11_4yxf6")
+
+[node name="RollerL" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=979553361]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.33333
+offset_top = -84.77777
+offset_right = -29.333328
+offset_bottom = 49.22223
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(67, 67)
+texture = ExtResource("11_4yxf6")
+
+[node name="Base" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=281221115]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -147.0
+offset_right = 230.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_jyqft")
+stretch_mode = 2
+
+[node name="Label" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=1085184261]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -119.0
+offset_right = 206.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_4n42c")
 
 [node name="Close" type="Button" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=312810261]
 layout_mode = 1
-offset_left = 39.0
-offset_top = 43.0
-offset_right = 112.0
-offset_bottom = 86.0
+offset_left = 38.0
+offset_top = 21.0
+offset_right = 137.0
+offset_bottom = 78.0
 theme_override_font_sizes/font_size = 35
 text = "Close"
 
@@ -344,9 +675,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -241.0
-offset_top = 166.0
+offset_top = 572.0
 offset_right = 241.0
-offset_bottom = 223.0
+offset_bottom = 629.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Search"
@@ -359,9 +690,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -272.0
-offset_top = -273.0
-offset_right = 272.0
-offset_bottom = 345.0
+offset_top = 29.0
+offset_right = 251.0
+offset_bottom = 452.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -382,6 +713,60 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Duration: "
 
+[node name="TabsContainer" type="HBoxContainer" parent="Utility/CanvasLayer" unique_id=703601310]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -77.0
+offset_right = 225.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="Lib" type="TextureButton" parent="Utility/CanvasLayer/TabsContainer" unique_id=2021316938]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("4_btbly")
+texture_pressed = ExtResource("5_vs04g")
+texture_hover = ExtResource("5_vs04g")
+texture_disabled = ExtResource("4_btbly")
+texture_focused = ExtResource("5_vs04g")
+
+[node name="Coll" type="TextureButton" parent="Utility/CanvasLayer/TabsContainer" unique_id=1033324691]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("6_6ehlx")
+texture_pressed = ExtResource("7_utia5")
+texture_hover = ExtResource("7_utia5")
+texture_disabled = ExtResource("6_6ehlx")
+texture_focused = ExtResource("7_utia5")
+
+[node name="FlowManager" type="Node" parent="Utility/CanvasLayer" unique_id=1305071637]
+script = ExtResource("2_vy5pj")
+
+[node name="TitleCanvas" type="CanvasLayer" parent="Utility" unique_id=213967484]
+
+[node name="Title" type="TextureRect" parent="Utility/TitleCanvas" unique_id=515795075]
+custom_minimum_size = Vector2(235, 80)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.0
+offset_top = 19.0
+offset_right = 142.0
+offset_bottom = 99.0
+grow_horizontal = 2
+scale = Vector2(0.79109156, 0.79109156)
+size_flags_horizontal = 3
+texture = ExtResource("2_bmxlf")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="Player" type="Control" parent="." unique_id=688034521]
 custom_minimum_size = Vector2(720, 1280)
 layout_mode = 1
@@ -397,12 +782,14 @@ offset_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="Player" unique_id=691876563]
-anchors_preset = 0
+[node name="BGBigContainer" type="Panel" parent="Player" unique_id=321688225]
+layout_mode = 0
 offset_left = 39.0
-offset_top = 739.0
+offset_top = 82.0
 offset_right = 680.0
-offset_bottom = 1136.0
+offset_bottom = 747.0
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_c4ay3")
 
 [node name="BG_FAKE" type="TextureRect" parent="Player" unique_id=505673528]
 layout_mode = 1
@@ -421,17 +808,200 @@ expand_mode = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.054
-anchor_top = 0.577
+anchor_top = 0.55300003
 anchor_right = 0.947
-anchor_bottom = 0.632
+anchor_bottom = 0.606
 offset_left = 0.11999893
-offset_top = 0.4399414
-offset_right = 0.15997314
-offset_bottom = -1.960022
+offset_top = 0.15997314
+offset_right = -1.8400269
+offset_bottom = 0.32000732
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
 theme_override_styles/panel = SubResource("StyleBoxFlat_1p5hy")
+
+[node name="StereoCasette" type="TextureRect" parent="Player" unique_id=437603994]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = -244.0
+offset_right = 242.0
+offset_bottom = -204.0
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_4yxf6")
+
+[node name="LedPlaying" type="Label" parent="Player" unique_id=1872926415]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -246.0
+offset_right = 56.0
+offset_bottom = -218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_font_sizes/font_size = 20
+text = "PLAYING"
+
+[node name="Led" type="TextureRect" parent="Player/LedPlaying" unique_id=972807859]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -23.5
+offset_right = 11.0
+offset_bottom = 23.5
+grow_vertical = 2
+texture = ExtResource("8_u7mjy")
+
+[node name="MixCasette" type="Control" parent="Player" unique_id=2028515876]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -207.0
+offset_top = 103.0
+offset_right = 253.0
+offset_bottom = 397.0
+grow_horizontal = 2
+scale = Vector2(0.9, 0.9)
+
+[node name="ButtonsBG" type="Panel" parent="Player/MixCasette" unique_id=2102317961]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -158.0
+offset_right = 340.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2w5on")
+
+[node name="RollPointR" type="TextureRect" parent="Player/MixCasette" unique_id=2109102594]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 113.0
+offset_right = 346.0
+offset_bottom = 144.0
+texture = ExtResource("9_4n42c")
+
+[node name="RollPointL" type="TextureRect" parent="Player/MixCasette" unique_id=986300833]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 114.0
+offset_right = 150.0
+offset_bottom = 145.0
+texture = ExtResource("9_4n42c")
+
+[node name="RollerR" type="TextureRect" parent="Player/MixCasette" unique_id=1754118008]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 33.333374
+offset_top = -84.77779
+offset_right = 167.33337
+offset_bottom = 49.222214
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(67, 67)
+texture = ExtResource("11_4yxf6")
+
+[node name="RollerL" type="TextureRect" parent="Player/MixCasette" unique_id=1664531999]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.33333
+offset_top = -84.77777
+offset_right = -29.333328
+offset_bottom = 49.22223
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(67, 67)
+texture = ExtResource("11_4yxf6")
+
+[node name="Base" type="TextureRect" parent="Player/MixCasette" unique_id=1952568725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -147.0
+offset_right = 230.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_jyqft")
+stretch_mode = 2
+
+[node name="Label" type="TextureRect" parent="Player/MixCasette" unique_id=1006727500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -119.0
+offset_right = 206.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_4n42c")
+
+[node name="SpeakerL" type="TextureRect" parent="Player/MixCasette" unique_id=1695207793]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -147.0
+offset_bottom = 147.0
+grow_vertical = 2
+texture = ExtResource("12_c5snn")
+
+[node name="SpeakeR" type="TextureRect" parent="Player/MixCasette" unique_id=1909762168]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -147.0
+offset_right = 96.0
+offset_bottom = 147.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("12_c5snn")
+
+[node name="CasetteAnims" type="AnimationPlayer" parent="Player/MixCasette" unique_id=795536850]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_vvnwx")
+autoplay = &"Stop"
+next/Starting = &"Roll"
+next/Stopping = &"Stop"
+blend_times = [&"Restart", &"Roll", 0.2, &"Starting", &"Roll", 0.25]
 
 [node name="CurrentSong" type="Control" parent="Player" unique_id=1784813829]
 unique_name_in_owner = true
@@ -443,9 +1013,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -322.0
-offset_top = -671.0
+offset_top = -702.0
 offset_right = 322.0
-offset_bottom = -547.0
+offset_bottom = -578.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_4kpch")
@@ -457,9 +1027,11 @@ anchor_right = 0.99700004
 anchor_bottom = 1.0
 offset_left = 1.0
 offset_right = -0.0680542
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_aht7i")
 
 [node name="Name" type="Label" parent="Player/CurrentSong" unique_id=362537486]
 layout_mode = 1
@@ -507,37 +1079,60 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 35
 text = "Upload"
 
-[node name="UploadFolder" type="Button" parent="Player/CurrentSong" unique_id=866935241]
+[node name="UploadFolder" type="TextureButton" parent="Player/CurrentSong" unique_id=2139493814]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -166.0
-offset_top = 96.0
-offset_right = -51.0
-offset_bottom = 136.0
+offset_left = -212.0
+offset_top = 76.0
+offset_right = -8.0
+offset_bottom = 127.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 23
-text = "Folder"
+texture_normal = ExtResource("16_qta6b")
+texture_pressed = ExtResource("16_qta6b")
+texture_hover = ExtResource("16_qta6b")
+texture_disabled = ExtResource("16_qta6b")
+texture_focused = ExtResource("16_qta6b")
+stretch_mode = 3
 
-[node name="PlayMode" type="Button" parent="Player/CurrentSong" unique_id=319920618]
+[node name="PlayMode" type="TextureButton" parent="Player/CurrentSong" unique_id=436029879]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 129.0
-offset_top = -264.0
-offset_right = 244.0
-offset_bottom = -207.0
+offset_left = 225.0
+offset_top = -300.0
+offset_right = 280.0
+offset_bottom = -243.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 35
-text = "Linear"
+texture_normal = ExtResource("9_kpo4j")
+texture_pressed = ExtResource("9_kpo4j")
+texture_hover = ExtResource("9_kpo4j")
+texture_focused = ExtResource("9_kpo4j")
+
+[node name="ModeLabel" type="Label" parent="Player/CurrentSong/PlayMode" unique_id=1270468176]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.5
+offset_right = 20.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("8_grg3l")
+theme_override_font_sizes/font_size = 15
+text = "Mode"
 
 [node name="TimePreview" type="HSlider" parent="Player/CurrentSong" unique_id=1456247365]
 layout_mode = 1
@@ -589,19 +1184,23 @@ theme = ExtResource("8_grg3l")
 theme_override_colors/font_color = Color(0.3647059, 0.54509807, 0.6509804, 1)
 text = "NOW PLAYING"
 
-[node name="Repeat" type="CheckButton" parent="Player/CurrentSong" unique_id=826210232]
-layout_mode = 0
-offset_left = 121.0
-offset_top = -161.0
-offset_right = 224.0
-offset_bottom = -130.0
-text = "Repeat"
+[node name="Repeat" type="CheckBox" parent="Player/CurrentSong" unique_id=1266938229]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 72.0
+offset_top = 10.0
+offset_right = 135.0
+offset_bottom = 73.0
+grow_horizontal = 2
+theme = SubResource("Theme_4n42c")
 
 [node name="ButtonsBG" type="Panel" parent="Player/CurrentSong" unique_id=1910503028]
 layout_mode = 0
-offset_left = 1.0
+offset_left = 14.0
 offset_top = -133.0
-offset_right = 642.0
+offset_right = 629.0
 offset_bottom = -20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2w5on")
 
@@ -610,11 +1209,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -321.0
-offset_top = -133.0
-offset_right = 320.0
-offset_bottom = -20.0
+offset_left = -298.0
+offset_top = -130.00002
+offset_right = 343.0
+offset_bottom = -17.000015
 grow_horizontal = 2
+scale = Vector2(0.9290248, 0.9290248)
 theme_override_constants/separation = 1
 alignment = 1
 
@@ -673,9 +1273,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -251.0
-offset_top = 117.0
+offset_top = 83.0
 offset_right = 108.0
-offset_bottom = 155.0
+offset_bottom = 121.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
@@ -696,6 +1296,19 @@ offset_bottom = 15.5
 grow_vertical = 2
 color = Color(0.5803922, 0.6, 0.61960787, 1)
 
+[node name="SearchIcon" type="TextureRect" parent="Player/SearchBar" unique_id=1080046165]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -15.0
+offset_right = -7.0
+offset_bottom = 25.0
+grow_vertical = 2
+scale = Vector2(0.75700736, 0.75700736)
+texture = ExtResource("27_xvtyr")
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Player" unique_id=185358945]
 layout_mode = 1
 anchors_preset = -1
@@ -704,8 +1317,8 @@ anchor_top = 0.684
 anchor_right = 0.5
 anchor_bottom = 0.684
 offset_left = -321.0
-offset_top = -68.52002
-offset_right = 322.0
+offset_top = -99.52002
+offset_right = 320.0
 offset_bottom = 260.47998
 grow_horizontal = 2
 grow_vertical = 2
@@ -725,11 +1338,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.054
 anchor_top = 0.88000005
-anchor_right = 0.947
+anchor_right = 0.94400007
 anchor_bottom = 0.887
 offset_left = 0.11999893
 offset_top = -0.4000244
-offset_right = 0.15997314
+offset_right = 0.3199463
 offset_bottom = 0.64001465
 grow_horizontal = 2
 grow_vertical = 2
@@ -741,85 +1354,16 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.054
 anchor_top = 0.87100005
-anchor_right = 0.947
+anchor_right = 0.94400007
 anchor_bottom = 0.887
 offset_left = 0.11999893
 offset_top = 0.11987305
-offset_right = 0.15997314
+offset_right = 0.3199463
 offset_bottom = 0.64001465
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
 theme_override_styles/panel = SubResource("StyleBoxFlat_h1m7h")
-
-[node name="MixCasette" type="Control" parent="Player" unique_id=2028515876]
-unique_name_in_owner = true
-anchors_preset = 0
-offset_top = 109.0
-offset_right = 720.0
-offset_bottom = 407.0
-
-[node name="Base" type="TextureRect" parent="Player/MixCasette" unique_id=1952568725]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -230.0
-offset_top = -147.0
-offset_right = 230.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("19_jyqft")
-
-[node name="Roller1" type="TextureRect" parent="Player/MixCasette" unique_id=1642354141]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -230.0
-offset_top = -147.0
-offset_right = 230.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("20_c4ay3")
-
-[node name="Roller2" type="TextureRect" parent="Player/MixCasette" unique_id=1664531999]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -230.0
-offset_top = -147.0
-offset_right = 230.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("21_aht7i")
-
-[node name="Label" type="TextureRect" parent="Player/MixCasette" unique_id=1006727500]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -230.0
-offset_top = -147.0
-offset_right = 230.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("19_jyqft")
 
 [node name="GroupHandle" type="Node" parent="Player" unique_id=1200405772]
 unique_name_in_owner = true
@@ -859,34 +1403,77 @@ offset_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NewMixtape" type="Button" parent="Mixtapes" unique_id=521487501]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 105.0
-offset_top = 166.0
-offset_right = 272.0
-offset_bottom = 209.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 25
-text = "New Mixtape"
-
-[node name="MixesContainer" type="VBoxContainer" parent="Mixtapes" unique_id=701082034]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(535, 565)
+[node name="BigBorder" type="Panel" parent="Mixtapes" unique_id=2010311773]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -267.5
-offset_top = -358.0
-offset_right = 267.5
-offset_bottom = 207.0
+offset_left = -320.0
+offset_top = -542.0
+offset_right = 320.0
+offset_bottom = 496.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_btbly")
+
+[node name="SmallBorder" type="Panel" parent="Mixtapes" unique_id=1706400218]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -476.0
+offset_right = 320.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vs04g")
+
+[node name="NewMixtape" type="TextureButton" parent="Mixtapes" unique_id=2065956179]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -254.00003
+offset_top = 111.99999
+offset_right = -84.0
+offset_bottom = 145.0
+grow_horizontal = 0
+scale = Vector2(1.1909306, 1.1909306)
+texture_normal = ExtResource("37_vs04g")
+texture_pressed = ExtResource("37_vs04g")
+texture_hover = ExtResource("37_vs04g")
+texture_disabled = ExtResource("37_vs04g")
+texture_focused = ExtResource("37_vs04g")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Mixtapes" unique_id=840013269]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -475.0
+offset_right = 318.0
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MixesContainer" type="VBoxContainer" parent="Mixtapes/ScrollContainer" unique_id=701082034]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(535, 565)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="MixesGroups" type="Node" parent="Mixtapes" unique_id=276509058]
 unique_name_in_owner = true
@@ -902,10 +1489,10 @@ autoplay = &"Library"
 blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 
 [connection signal="button_down" from="Utility/CanvasLayer/TextEdit/OK" to="Utility/CanvasLayer/TextEdit" method="set_author"]
-[connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Lib" to="Utility/CanvasLayer/FlowManager" method="go_to_library"]
-[connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]
 [connection signal="button_down" from="Utility/CanvasLayer/MixtapeEdit/Close" to="Utility/CanvasLayer/MixtapeEdit" method="close_casette"]
 [connection signal="text_changed" from="Utility/CanvasLayer/MixtapeEdit/SearchBar" to="Utility/CanvasLayer/MixtapeEdit" method="search_text_changed"]
+[connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Lib" to="Utility/CanvasLayer/FlowManager" method="go_to_library"]
+[connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]
 [connection signal="button_down" from="Player/CurrentSong/Upload" to="Player/UploadingHandle" method="open_file_manager"]
 [connection signal="button_down" from="Player/CurrentSong/UploadFolder" to="Player/UploadingHandle" method="open_folder_manager"]
 [connection signal="button_down" from="Player/CurrentSong/PlayMode" to="Player/CurrentSong" method="change_play_mode"]

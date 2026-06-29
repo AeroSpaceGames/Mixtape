@@ -4,13 +4,16 @@ var my_name: String = ""
 
 signal mixtape_data(nm: String)
 signal play_mix(nm: String)
-@onready var select: Button = %Select
+@onready var select: TextureButton = %Select
 @onready var duration: Label = $Duration
 
 func _ready() -> void:
 	if my_name == "My Library":
 		select.hide()
 	
+	duration_changed()
+
+func duration_changed():
 	if PlaylistManager.mix_library.mixtape_list[my_name].duration != 0:
 		duration.text = from_seconds_to_clockhour(int(PlaylistManager.mix_library.mixtape_list[my_name].duration))
 
@@ -21,7 +24,8 @@ func open_me():
 	mixtape_data.emit(my_name)
 
 func play_mixtape():
-	play_mix.emit(my_name)
+	if PlaylistManager.mix_library.mixtape_list[my_name].song_indexes.size() > 0:
+		play_mix.emit(my_name)
 
 
 func from_seconds_to_clockhour(secs: int) -> String:

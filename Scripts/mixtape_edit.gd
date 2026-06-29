@@ -44,6 +44,8 @@ func sort_songs(indexes: Array, key: String = ""):
 	for d in group_container.get_children():
 		d.queue_free()
 	
+	get_tree().call_group("MixGroup", "duration_changed")
+	
 	search_result(indexes, key)
 
 func search_result(indexes: Array, key: String = ""):

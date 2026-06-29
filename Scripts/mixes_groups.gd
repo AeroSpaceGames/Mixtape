@@ -18,10 +18,13 @@ func create_groups():
 	for i in len(mixtape_res):
 		var new_group = group_scene.instantiate()
 		new_group.set_data(mixtape_res[i].my_name)
+		if mixtape_res[i].my_name == "My Library":
+			new_group.name = "MyLibrary"
 		new_group.get_node("Name").text = mixtape_res[i].my_name
 		new_group.connect("mixtape_data", MixtapeEdit.open_mixtape)
 		new_group.connect("play_mix", MixtapeEdit.read_mixtape)
 		MixesContainer.add_child(new_group)
+	MixesContainer.move_child(MixesContainer.get_node("MyLibrary"), 0)
 
 func _set_current(nm: String, auth: String):
 	current_song.set_song(AudioManager.song_library.get_song(nm, auth))

@@ -16,11 +16,11 @@ expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
 [node name="SongGroup" type="Control" unique_id=1165022880 groups=["SongGroup"]]
-custom_minimum_size = Vector2(640, 50)
+custom_minimum_size = Vector2(639, 50)
 layout_mode = 3
-anchor_right = 0.8880001
+anchor_right = 0.887
 anchor_bottom = 0.039
-offset_right = 0.6399536
+offset_right = 0.35998535
 offset_bottom = 0.07999802
 grow_horizontal = 2
 grow_vertical = 2
