@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cya2f8fptut6" path="res://Scripts/edit_song_data.gd" id="1_50glp"]
 [ext_resource type="Texture2D" uid="uid://c2kdifgjm5hud" path="res://Asssets/PNG/New Assets MixTape/Background_General.png" id="1_grg3l"]
-[ext_resource type="Texture2D" uid="uid://cgq0f3cmyarmu" path="res://Asssets/PNG/Mixtape Assets/General Items/Logo.png" id="2_bmxlf"]
 [ext_resource type="Script" uid="uid://bfqicc7dgf36p" path="res://Scripts/flow_manager.gd" id="2_vy5pj"]
 [ext_resource type="Script" uid="uid://gmm3tnh67mru" path="res://Scripts/mixtape_edit.gd" id="3_bmxlf"]
 [ext_resource type="Script" uid="uid://cqlduviglf3v4" path="res://Scripts/current_song.gd" id="4_4kpch"]
@@ -14,31 +13,33 @@
 [ext_resource type="Script" uid="uid://yja2escdyw7r" path="res://Scripts/uploading_handle.gd" id="6_frkhe"]
 [ext_resource type="Script" uid="uid://d4fotw58gln82" path="res://Scripts/mixes_groups.gd" id="7_1p5hy"]
 [ext_resource type="Texture2D" uid="uid://cbburo3g2rdm7" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Button_Pressed_(Animation).png" id="7_utia5"]
-[ext_resource type="Texture2D" uid="uid://4ckgmqmpm6u7" path="res://Asssets/PNG/New Assets MixTape/Stereo Cassette Logo.png" id="8_4yxf6"]
+[ext_resource type="Texture2D" uid="uid://4ckgmqmpm6u7" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stereo Cassette Logo.png" id="8_4yxf6"]
 [ext_resource type="Theme" uid="uid://d3cauhlc30q8o" path="res://Asssets/Fonts/MainTheme.tres" id="8_grg3l"]
 [ext_resource type="Script" uid="uid://bnx6jhmsq1mlg" path="res://Scripts/mixes_handler.gd" id="8_h1m7h"]
-[ext_resource type="Texture2D" uid="uid://6mep6yw30jy0" path="res://Asssets/PNG/New Assets MixTape/Led_Off_(Playing_Animation).png" id="8_u7mjy"]
+[ext_resource type="Texture2D" uid="uid://6mep6yw30jy0" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Led_Off_(Playing_Animation).png" id="8_u7mjy"]
 [ext_resource type="Texture2D" uid="uid://b3vaf6okm5acl" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Prev_Button_Released (Animation).png" id="9_2w5on"]
-[ext_resource type="Texture2D" uid="uid://c8k0sorwgneb4" path="res://Asssets/PNG/New Assets MixTape/Punto de Rodamiento.png" id="9_4n42c"]
-[ext_resource type="Texture2D" uid="uid://cnoalp4jlhlp5" path="res://Asssets/PNG/New Assets MixTape/Repeat_Button_On (Animation).png" id="9_5jffn"]
-[ext_resource type="Texture2D" uid="uid://boyk5mfpbygev" path="res://Asssets/PNG/New Assets MixTape/In Order_Mode_Button.png" id="9_kpo4j"]
+[ext_resource type="Texture2D" uid="uid://c8k0sorwgneb4" path="res://Asssets/PNG/New Assets MixTape/Casette/Punto de Rodamiento.png" id="9_4n42c"]
+[ext_resource type="Texture2D" uid="uid://cnoalp4jlhlp5" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Repeat_Button_On (Animation).png" id="9_5jffn"]
+[ext_resource type="Texture2D" uid="uid://b87j03oo5ovt2" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Buttons/Label_Button_Released_(Animation).png" id="9_6ehlx"]
+[ext_resource type="Texture2D" uid="uid://boyk5mfpbygev" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/In Order_Mode_Button.png" id="9_kpo4j"]
 [ext_resource type="Texture2D" uid="uid://b6l5u4q2iyrkn" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Released (Animation).png" id="10_346fj"]
 [ext_resource type="Texture2D" uid="uid://cjuasufcvs342" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Prev_Button_Pressed (Animation).png" id="10_hwpts"]
-[ext_resource type="Texture2D" uid="uid://dwqjdkh1dgurs" path="res://Asssets/PNG/New Assets MixTape/Repeat_Button_Off (Animation).png" id="10_kpo4j"]
+[ext_resource type="Texture2D" uid="uid://dwqjdkh1dgurs" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Repeat_Button_Off (Animation).png" id="10_kpo4j"]
+[ext_resource type="Texture2D" uid="uid://dl2n5o4ou611w" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Buttons/Label_Button_Pressed_(Animation).png" id="10_utia5"]
 [ext_resource type="Texture2D" uid="uid://c0tyel12rnuo" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stop_Button_Released (Animation).png" id="11_0sclb"]
-[ext_resource type="Texture2D" uid="uid://c0yaf823hsa0d" path="res://Asssets/PNG/New Assets MixTape/Label_1.png" id="11_4n42c"]
-[ext_resource type="Texture2D" uid="uid://dh3g8dil1rlou" path="res://Asssets/PNG/New Assets MixTape/Tape.png" id="11_4yxf6"]
-[ext_resource type="Texture2D" uid="uid://bg52ywtije0wv" path="res://Asssets/PNG/New Assets MixTape/Speaker.png" id="12_c5snn"]
+[ext_resource type="Texture2D" uid="uid://c0yaf823hsa0d" path="res://Asssets/PNG/New Assets MixTape/Label/Label_1.png" id="11_4n42c"]
+[ext_resource type="Texture2D" uid="uid://dh3g8dil1rlou" path="res://Asssets/PNG/New Assets MixTape/Casette/Tape.png" id="11_4yxf6"]
+[ext_resource type="Texture2D" uid="uid://bg52ywtije0wv" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Speaker.png" id="12_c5snn"]
 [ext_resource type="Texture2D" uid="uid://ctax5cvqh7acq" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Pressed (Animation).png" id="12_jyqft"]
 [ext_resource type="Texture2D" uid="uid://qx0d2ahtiyao" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Released (Animation).png" id="12_sxkr1"]
 [ext_resource type="Texture2D" uid="uid://b8py6btoj8w30" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Next_Button_Released (Animation).png" id="13_fq0cl"]
 [ext_resource type="Texture2D" uid="uid://b1ifgp15aki1s" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Stop_Button_Pressed (Animation).png" id="14_3tgeq"]
 [ext_resource type="Texture2D" uid="uid://ci8e4sbqgi81s" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Pressed (Animation).png" id="16_c4ay3"]
-[ext_resource type="Texture2D" uid="uid://bk74se8128njl" path="res://Asssets/PNG/New Assets MixTape/Add_Tracks_Button.png" id="16_qta6b"]
+[ext_resource type="Texture2D" uid="uid://bk74se8128njl" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Add_Tracks_Button.png" id="16_qta6b"]
 [ext_resource type="Texture2D" uid="uid://ckg2q54gkp7j1" path="res://Asssets/PNG/New Assets MixTape/Player_Buttons/Next_Button_Pressed (Animation).png" id="18_aht7i"]
-[ext_resource type="Texture2D" uid="uid://bsdo8g6rrv50f" path="res://Asssets/PNG/New Assets MixTape/Cassette_Base_ok.png" id="19_jyqft"]
+[ext_resource type="Texture2D" uid="uid://bsdo8g6rrv50f" path="res://Asssets/PNG/New Assets MixTape/Casette/Cassette_Base_ok.png" id="19_jyqft"]
 [ext_resource type="Texture2D" uid="uid://b61gva7x4sb26" path="res://Asssets/PNG/New Assets MixTape/Search Icon.png" id="27_xvtyr"]
-[ext_resource type="Texture2D" uid="uid://bmyuiwsorlby3" path="res://Asssets/PNG/New Assets MixTape/New_Mixtape_Button.png" id="37_vs04g"]
+[ext_resource type="Texture2D" uid="uid://bmyuiwsorlby3" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Buttons/New_Mixtape_Button.png" id="37_vs04g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btbly"]
 bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
@@ -52,6 +53,49 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs04g"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ehlx"]
+bg_color = Color(0.14117648, 0.18431373, 0.23137255, 1)
+border_color = Color(0.57254905, 0.5882353, 0.60784316, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vs04g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frkhe"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1m7h"]
+bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
+draw_center = false
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_btbly"]
+load_path = "res://.godot/imported/Logo.png-0eeec0abcdee7bcc1bff7865c9ee23ed.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4ay3"]
 bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
@@ -306,33 +350,6 @@ CheckBox/icons/unchecked = ExtResource("10_kpo4j")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grg3l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frkhe"]
-bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
-draw_center = false
-border_width_left = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1m7h"]
-bg_color = Color(0.09803922, 0.14117648, 0.20392157, 1)
-draw_center = false
-border_width_left = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs04g"]
-draw_center = false
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_color = Color(0.34509805, 0.37254903, 0.40784314, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-
 [sub_resource type="Animation" id="Animation_4y0hx"]
 resource_name = "Collection"
 step = 0.05
@@ -563,12 +580,46 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -320.0
 offset_top = -542.0
-offset_right = 320.0
+offset_right = 321.0
 offset_bottom = 496.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_grg3l")
 theme_override_styles/panel = SubResource("StyleBoxFlat_btbly")
+
+[node name="SmallBorder" type="Panel" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=340752291]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = 68.0
+offset_right = 321.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vs04g")
+
+[node name="AddLabel" type="Label" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1686566018]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = 86.0
+offset_right = -74.0
+offset_bottom = 114.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_colors/font_color = Color(0.3647059, 0.54509807, 0.6509804, 1)
+theme_override_font_sizes/font_size = 20
+text = "ADD"
 
 [node name="Casette" type="Control" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1246702834]
 layout_mode = 1
@@ -646,6 +697,7 @@ texture = ExtResource("19_jyqft")
 stretch_mode = 2
 
 [node name="Label" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/Casette" unique_id=1085184261]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -669,18 +721,206 @@ offset_bottom = 78.0
 theme_override_font_sizes/font_size = 35
 text = "Close"
 
+[node name="NameEdit" type="Control" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1381890432]
+layout_mode = 1
+anchor_left = 0.087000005
+anchor_top = 0.33900002
+anchor_right = 0.91400003
+anchor_bottom = 0.41700003
+offset_left = 0.3599968
+offset_top = 0.07998657
+offset_right = -0.08001709
+offset_bottom = 0.23999023
+
+[node name="NamePanel" type="Panel" parent="Utility/CanvasLayer/MixtapeEdit/NameEdit" unique_id=1182638202]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+
+[node name="MixtapeNameLabel" type="Label" parent="Utility/CanvasLayer/MixtapeEdit/NameEdit" unique_id=610649062]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 143.0
+offset_bottom = 36.0
+theme = ExtResource("8_grg3l")
+theme_override_font_sizes/font_size = 16
+text = "MIXTAPE NAME:"
+
+[node name="NewName" type="LineEdit" parent="Utility/CanvasLayer/MixtapeEdit/NameEdit" unique_id=72219217]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -4.0
+offset_right = 248.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ehlx")
+placeholder_text = "Name"
+
+[node name="LabelEdit" type="Control" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=11029386]
+anchors_preset = 0
+offset_left = 63.0
+offset_top = 542.0
+offset_right = 658.0
+offset_bottom = 691.0
+
+[node name="LabelPanel" type="Panel" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=527845534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+
+[node name="SeparationLine" type="ColorRect" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=623274875]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.5
+offset_top = -67.5
+offset_right = -132.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+
+[node name="SeparationLine2" type="ColorRect" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=261381781]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 133.5
+offset_top = -67.5
+offset_right = 135.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34509805, 0.37254903, 0.40784314, 1)
+
+[node name="Prev" type="TextureButton" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=1526081623]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 120.0
+offset_bottom = 132.0
+size_flags_vertical = 4
+texture_normal = ExtResource("9_6ehlx")
+texture_pressed = ExtResource("10_utia5")
+texture_hover = ExtResource("10_utia5")
+texture_disabled = ExtResource("9_6ehlx")
+texture_focused = ExtResource("9_6ehlx")
+flip_h = true
+
+[node name="LabelTexture" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=813198670]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.499985
+offset_top = -51.5
+offset_right = 318.5
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.43168682, 0.43168682)
+texture = ExtResource("11_4n42c")
+
+[node name="Next" type="TextureButton" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=801336948]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 17.0
+offset_right = 566.0
+offset_bottom = 131.0
+size_flags_vertical = 4
+texture_normal = ExtResource("9_6ehlx")
+texture_pressed = ExtResource("10_utia5")
+texture_hover = ExtResource("10_utia5")
+texture_disabled = ExtResource("9_6ehlx")
+texture_focused = ExtResource("9_6ehlx")
+
+[node name="LabelText" type="Label" parent="Utility/CanvasLayer/MixtapeEdit/LabelEdit" unique_id=1428833161]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -39.0
+offset_right = 24.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "LABEL"
+
+[node name="SaveBtn" type="Button" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1450831580]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 420.0
+offset_right = 599.0
+offset_bottom = 460.0
+text = "Save"
+
 [node name="SearchBar" type="LineEdit" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1552111469]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -241.0
-offset_top = 572.0
-offset_right = 241.0
-offset_bottom = 629.0
+offset_left = -250.0
+offset_top = 723.0
+offset_right = 110.0
+offset_bottom = 761.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 25
+theme = ExtResource("8_grg3l")
+theme_override_colors/font_color = Color(0.3647059, 0.54509807, 0.6509804, 1)
+theme_override_colors/font_placeholder_color = Color(0.3647059, 0.54509807, 0.6509804, 0.23529412)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vs04g")
 placeholder_text = "Search"
+
+[node name="ColorRect" type="ColorRect" parent="Utility/CanvasLayer/MixtapeEdit/SearchBar" unique_id=713914747]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -15.5
+offset_right = -6.0
+offset_bottom = 15.5
+grow_vertical = 2
+color = Color(0.5803922, 0.6, 0.61960787, 1)
+
+[node name="SearchIcon" type="TextureRect" parent="Utility/CanvasLayer/MixtapeEdit/SearchBar" unique_id=67070820]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -15.0
+offset_right = -7.0
+offset_bottom = 25.0
+grow_vertical = 2
+scale = Vector2(0.75700736, 0.75700736)
+texture = ExtResource("27_xvtyr")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=692192672]
 layout_mode = 1
@@ -689,29 +929,52 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -272.0
-offset_top = 29.0
-offset_right = 251.0
-offset_bottom = 452.0
+offset_left = -320.0
+offset_top = 136.0
+offset_right = 321.0
+offset_bottom = 496.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("8_grg3l")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
 
 [node name="SongsGroup" type="VBoxContainer" parent="Utility/CanvasLayer/MixtapeEdit/ScrollContainer" unique_id=1625444616]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/separation = 0
 
-[node name="Duration" type="Label" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=929835839]
+[node name="PanelBG" type="Panel" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=1544209504]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 46.0
-offset_top = -113.0
-offset_right = 191.0
-offset_bottom = -71.0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 30
-text = "Duration: "
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.88000005
+anchor_right = 0.94600004
+anchor_bottom = 0.887
+offset_left = -0.3199997
+offset_top = -0.4000244
+offset_right = -0.12005615
+offset_bottom = 0.64001465
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_frkhe")
+
+[node name="PanelDown" type="Panel" parent="Utility/CanvasLayer/MixtapeEdit" unique_id=7836311]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.87100005
+anchor_right = 0.94600004
+anchor_bottom = 0.887
+offset_left = -0.3199997
+offset_top = 0.11987305
+offset_right = -0.12005615
+offset_bottom = 0.64001465
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_grg3l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1m7h")
 
 [node name="TabsContainer" type="HBoxContainer" parent="Utility/CanvasLayer" unique_id=703601310]
 anchors_preset = 7
@@ -747,6 +1010,7 @@ texture_disabled = ExtResource("6_6ehlx")
 texture_focused = ExtResource("7_utia5")
 
 [node name="FlowManager" type="Node" parent="Utility/CanvasLayer" unique_id=1305071637]
+unique_name_in_owner = true
 script = ExtResource("2_vy5pj")
 
 [node name="TitleCanvas" type="CanvasLayer" parent="Utility" unique_id=213967484]
@@ -763,7 +1027,7 @@ offset_bottom = 99.0
 grow_horizontal = 2
 scale = Vector2(0.79109156, 0.79109156)
 size_flags_horizontal = 3
-texture = ExtResource("2_bmxlf")
+texture = SubResource("CompressedTexture2D_btbly")
 expand_mode = 1
 stretch_mode = 4
 
@@ -840,9 +1104,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -29.0
+offset_left = -39.0
 offset_top = -246.0
-offset_right = 56.0
+offset_right = 46.0
 offset_bottom = -218.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -955,7 +1219,8 @@ grow_vertical = 2
 texture = ExtResource("19_jyqft")
 stretch_mode = 2
 
-[node name="Label" type="TextureRect" parent="Player/MixCasette" unique_id=1006727500]
+[node name="PlayerLabel" type="TextureRect" parent="Player/MixCasette" unique_id=1006727500]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1474,6 +1739,7 @@ custom_minimum_size = Vector2(535, 565)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 0
 
 [node name="MixesGroups" type="Node" parent="Mixtapes" unique_id=276509058]
 unique_name_in_owner = true
@@ -1490,6 +1756,7 @@ blend_times = [&"Collection", &"Library", 0.5, &"Library", &"Collection", 0.5]
 
 [connection signal="button_down" from="Utility/CanvasLayer/TextEdit/OK" to="Utility/CanvasLayer/TextEdit" method="set_author"]
 [connection signal="button_down" from="Utility/CanvasLayer/MixtapeEdit/Close" to="Utility/CanvasLayer/MixtapeEdit" method="close_casette"]
+[connection signal="button_down" from="Utility/CanvasLayer/MixtapeEdit/SaveBtn" to="Utility/CanvasLayer/MixtapeEdit" method="save_data"]
 [connection signal="text_changed" from="Utility/CanvasLayer/MixtapeEdit/SearchBar" to="Utility/CanvasLayer/MixtapeEdit" method="search_text_changed"]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Lib" to="Utility/CanvasLayer/FlowManager" method="go_to_library"]
 [connection signal="button_down" from="Utility/CanvasLayer/TabsContainer/Coll" to="Utility/CanvasLayer/FlowManager" method="go_to_collection"]

@@ -6,6 +6,8 @@ const SAVE_GAME_PATH = "user://collection.tres"
 @export var mixtapes: Dictionary[String, Array]
 # "a" : [my name, design, [song indexes]]
 
+@export var new_mix_name: int = 0
+
 func load_mix_from_coll(nm: String, data: Array):
 	var new_mixtape: Mixtape = Mixtape.new()
 	new_mixtape.my_name = data[0]

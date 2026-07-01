@@ -92,10 +92,15 @@ grow_vertical = 2
 
 [node name="Add" type="CheckBox" parent="." unique_id=1772172241]
 layout_mode = 1
-offset_left = 586.0
-offset_top = 12.0
-offset_right = 610.0
-offset_bottom = 36.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -73.00006
+offset_top = 2.0000002
+offset_right = 9.352966
+offset_bottom = 55.0
+grow_horizontal = 0
+scale = Vector2(0.85, 0.85)
 theme = ExtResource("2_hqgl6")
 flat = true
 

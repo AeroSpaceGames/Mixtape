@@ -30,6 +30,7 @@ func create_or_load_saves():
 		PlaylistManager.mix_library.mixtape_list = {}
 		for i in _coll.mixtapes.keys():
 			_coll.load_mix_from_coll(i, _coll.mixtapes[i])
+		PlaylistManager.new_mixes_name = _coll.new_mix_name
 	else:
 		_coll = CollectionSave.new()
 		#var auto_mix: Mixtape = Mixtape.new()
@@ -39,6 +40,7 @@ func create_or_load_saves():
 		#auto_mix.song_indexes = []
 		PlaylistManager.mix_library.mixtape_list = {}
 		_coll.mixtapes = {}
+		_coll.new_mix_name = 0
 		_coll.write_savegame()
 
 

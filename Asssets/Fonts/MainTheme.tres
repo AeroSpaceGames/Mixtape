@@ -1,25 +1,33 @@
 [gd_resource type="Theme" format=3 uid="uid://d3cauhlc30q8o"]
 
-[ext_resource type="Texture2D" uid="uid://dajnvy0svb3s2" path="res://Asssets/PNG/Mixtape Assets/Player Screen/Seek Bar/Seek_Bar_Thumb.png" id="1_vef3l"]
-[ext_resource type="Texture2D" uid="uid://dxtcns2jud51a" path="res://Asssets/PNG/Mixtape Assets/Player Screen/Seek Bar/Seek_Bar_(Animation).png" id="2_mtold"]
-[ext_resource type="Texture2D" uid="uid://dsxkb56fg1jie" path="res://Asssets/PNG/Mixtape Assets/Player Screen/Seek Bar/Seek_Bar_Background.png" id="3_8isio"]
+[ext_resource type="Texture2D" uid="uid://bkod47ypggnuu" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Buttons/Add_On_Button_(Animation).png" id="1_h2f5g"]
+[ext_resource type="Texture2D" uid="uid://dghlka12hc4c1" path="res://Asssets/PNG/New Assets MixTape/Mixtape_Buttons/Add_Off_Button_(Animation).png" id="2_vef3l"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mtold"]
+load_path = "res://.godot/imported/Seek_Bar_Thumb.png-b1a1ee45ef4cf9d7f46e3a175625be54.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8isio"]
+load_path = "res://.godot/imported/Seek_Bar_(Animation).png-78b62aab4029e587187b9a59a7db9638.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_squxn"]
-texture = ExtResource("2_mtold")
+texture = SubResource("CompressedTexture2D_8isio")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwaix"]
-texture = ExtResource("2_mtold")
+texture = SubResource("CompressedTexture2D_8isio")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_squxn"]
+load_path = "res://.godot/imported/Seek_Bar_Background.png-76977d4b673184c20423413405f04fa9.ctex"
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvjgj"]
-texture = ExtResource("3_8isio")
+texture = SubResource("CompressedTexture2D_squxn")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
@@ -63,10 +71,12 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [resource]
+CheckBox/icons/checked = ExtResource("1_h2f5g")
+CheckBox/icons/unchecked = ExtResource("2_vef3l")
 HSlider/constants/center_grabber = -1
-HSlider/icons/grabber = ExtResource("1_vef3l")
-HSlider/icons/grabber_disabled = ExtResource("1_vef3l")
-HSlider/icons/grabber_highlight = ExtResource("1_vef3l")
+HSlider/icons/grabber = SubResource("CompressedTexture2D_mtold")
+HSlider/icons/grabber_disabled = SubResource("CompressedTexture2D_mtold")
+HSlider/icons/grabber_highlight = SubResource("CompressedTexture2D_mtold")
 HSlider/styles/grabber_area = SubResource("StyleBoxTexture_squxn")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_iwaix")
 HSlider/styles/slider = SubResource("StyleBoxTexture_vvjgj")

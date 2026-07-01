@@ -6,16 +6,21 @@ signal mixtape_data(nm: String)
 signal play_mix(nm: String)
 @onready var select: TextureButton = %Select
 @onready var duration: Label = $Duration
+@onready var label: TextureRect = %Label
 
 func _ready() -> void:
 	if my_name == "My Library":
 		select.hide()
 	
 	duration_changed()
+	label_changed()
 
 func duration_changed():
 	if PlaylistManager.mix_library.mixtape_list[my_name].duration != 0:
 		duration.text = from_seconds_to_clockhour(int(PlaylistManager.mix_library.mixtape_list[my_name].duration))
+
+func label_changed():
+	label.texture = CasettesTextures.labels[PlaylistManager.mix_library.mixtape_list[my_name].design]
 
 func set_data(nm: String):
 	my_name = nm

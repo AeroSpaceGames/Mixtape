@@ -2,9 +2,9 @@ extends Control
 
 var on_play: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Released (Animation).png"), preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Play_Button_Pressed (Animation).png")]
 var on_pause: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Released (Animation).png"), preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Pause_Button_Pressed (Animation).png")]
-var led_texts: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Led_Off_(Playing_Animation).png"), preload("res://Asssets/PNG/New Assets MixTape/Led_On_(Playing_Animation).png")]
+var led_texts: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Led_Off_(Playing_Animation).png"), preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Led_On_(Playing_Animation).png")]
 
-var play_mode_textures: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/In Order_Mode_Button.png"), preload("res://Asssets/PNG/New Assets MixTape/Shuffle_Mode_Button.png")]
+var play_mode_textures: Array[CompressedTexture2D] = [preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/In Order_Mode_Button.png"), preload("res://Asssets/PNG/New Assets MixTape/Player_Buttons/Shuffle_Mode_Button.png")]
 
 @onready var my_name: Label = $Name
 @onready var author: Label = $Author
@@ -27,6 +27,8 @@ func _ready() -> void:
 	AudioManager.connect("song_ended", restart_playlist)
 
 func restart_playlist():
+	if PlaylistManager.mix_library.mixtape_list[PlaylistManager.selected_mix].song_indexes.size() <= 1:
+		PlaylistManager.playlist_index -= 1
 	if repeat_mode:
 		PlaylistManager.playlist_index -= 1
 	else:

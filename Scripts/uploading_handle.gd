@@ -107,7 +107,6 @@ func file_selected(path: String, autoplay: bool = true):
 	mixes_groups.create_groups()
 	PlaylistManager.selected_mix = "My Library"
 	
-	group_handle.clean_groups()
 
 func scan_folder(folder_path: String):
 	var dir = DirAccess.open(folder_path)
@@ -138,6 +137,8 @@ func scan_folder(folder_path: String):
 			#await edit_song_data.text_changed
 		
 		await get_tree().create_timer(0.1).timeout
+	
+	group_handle.clean_groups()
 	dir.list_dir_end()
 
 func dir_selected(dir: String):

@@ -4,9 +4,14 @@ var group_scene = preload("res://Scenes/song_group.tscn")
 
 @onready var group_container: VBoxContainer = %SongsGroup
 @onready var current_song: Control = %CurrentSong
-@onready var duration: Label = $Duration
 @onready var group_handle: Node = %GroupHandle
 @onready var search_bar: LineEdit = $SearchBar
+@onready var flow_manager: Node = %FlowManager
+@onready var mixes_groups: Node = %MixesGroups
+@onready var new_name: LineEdit = %NewName
+@onready var label: TextureRect = %Label
+@onready var player_label: TextureRect = %PlayerLabel
+
 
 var _coll: CollectionSave
 
@@ -19,17 +24,19 @@ func _ready() -> void:
 func read_mixtape(nm: String):
 	var res = PlaylistManager.mix_library.mixtape_list[nm]
 	recent_mixtape = res
+	player_label.texture = CasettesTextures.labels[res.design]
+	flow_manager.go_to_library()
 	_set_current()
 
 func open_mixtape(nm: String):
 	var res = PlaylistManager.mix_library.mixtape_list[nm]
+	
+	label.texture = CasettesTextures.labels[res.design]
+	new_name.text = res.my_name
 	sort_songs(res.song_indexes)
 	recent_mixtape = res
-	show_duration()
 	show()
 
-func show_duration():
-	duration.text = "Duration: " + str(recent_mixtape.duration)
 
 func close_casette():
 	group_handle.clean_groups()
@@ -71,7 +78,7 @@ func search_result(indexes: Array, key: String = ""):
 		if index_txt.left(clamp(len(key), 0, len(index_txt))) != key.left(clamp(len(key), 0, len(index_txt))):
 			continue
 		var new_song = group_scene.instantiate()
-		new_song.get_node("Name").text = "n-" + song_res[j].name
+		new_song.get_node("Name").text = song_res[j].name
 		new_song.get_node("Author").text = song_res[j].author
 		new_song.get_node("Add").button_pressed = false
 		new_song.in_playlist = true
@@ -97,7 +104,6 @@ func add_or_remove(idx: int):
 		final_duration += AudioManager.song_library.songs_list.values()[i].duration
 	PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].duration = final_duration
 	
-	show_duration()
 	
 	#Save control
 	if CollectionSave.save_exists():
@@ -105,8 +111,46 @@ func add_or_remove(idx: int):
 		_coll.mixtapes[recent_mixtape.my_name] = [recent_mixtape.my_name, recent_mixtape.design, recent_mixtape.duration, recent_mixtape.song_indexes]
 		_coll.write_savegame()
 	
-	search_bar.text = ""
-	sort_songs(PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].song_indexes)
+	#search_bar.text = ""
+	sort_songs(PlaylistManager.mix_library.mixtape_list[recent_mixtape.my_name].song_indexes, search_bar.text)
+
+
+func save_mix_name(txt: String):
+	if CollectionSave.save_exists():
+		_coll = CollectionSave.load_savegame() as CollectionSave
+		if txt in _coll.mixtapes:
+			return false
+		if len(recent_mixtape.my_name.trim_prefix("NewMixtape")) == len(recent_mixtape.my_name) - len("NewMixtape"):
+			_coll.new_mix_name -= 1
+		if len(txt.trim_prefix("NewMixtape")) == len(txt) - len("NewMixtape"):
+			_coll.new_mix_name += 1
+		_coll.mixtapes[txt] = _coll.mixtapes[recent_mixtape.my_name]
+		_coll.mixtapes[txt][0] = txt
+		_coll.mixtapes.erase(recent_mixtape.my_name)
+		_coll.write_savegame()
+		PlaylistManager.mix_library.mixtape_list = {}
+		for i in _coll.mixtapes.keys():
+			_coll.load_mix_from_coll(i, _coll.mixtapes[i])
+		PlaylistManager.new_mixes_name = _coll.new_mix_name
+		if PlaylistManager.selected_mix == recent_mixtape.my_name:
+			PlaylistManager.selected_mix = txt
+
+func save_mix_label(txt: String, design: int):
+	if CollectionSave.save_exists():
+		_coll = CollectionSave.load_savegame() as CollectionSave
+		_coll.mixtapes[txt][1] = design
+		PlaylistManager.mix_library.mixtape_list[txt].design = design
+		_coll.write_savegame()
+
+
+func save_data():
+	var txt: String = new_name.text
+	save_mix_name(txt)
+	#save_mix_label(txt, 0)
+	
+	
+	mixes_groups.create_groups()
+	open_mixtape(txt)
 
 
 func _set_current():
@@ -118,4 +162,4 @@ func _set_current():
 	AudioManager.playing_song_index = 0
 	AudioManager.play_song(new_song_res)
 	current_song.set_song(new_song_res)
-	PlaylistManager.generate_playlist(recent_mixtape.song_indexes)
+	PlaylistManager.generate_playlist(recent_mixtape.song_indexes, PlaylistManager.play_mode)

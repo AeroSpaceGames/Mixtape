@@ -13,13 +13,13 @@ config_version=5
 config/name="Mixtape"
 run/main_scene="uid://b36yp8wwaju57"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="uid://tjfrj1klplc7"
 
 [autoload]
 
 AudioManager="*uid://q8bgb2thow6r"
 PlaylistManager="*uid://bw71icbi4i7dn"
 TrackManager="*uid://trgferwpg7od"
+CasettesTextures="*uid://bm206q7fmncou"
 
 [display]
 

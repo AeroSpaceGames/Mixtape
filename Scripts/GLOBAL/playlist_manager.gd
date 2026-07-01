@@ -6,7 +6,9 @@ extends Node
 @export var play_mode: int = 0
 
 @export var mix_library: MixCollection = MixCollection.new()
-var designs: Array = [0,1,2]
+var designs: Array = [0,1,2,3,4,5] #6 label designs
+
+@export var new_mixes_name: int = 0
 
 var selected_mix: String = "My Library"
 
@@ -17,6 +19,10 @@ func add_mixtape(nm: String, res: Mixtape):
 func generate_playlist(songs: Array, mode: int = 0):
 	#actual_playlist.append([AudioManager.selected_song, AudioManager.selected_author])
 	if len(songs) <= 1:
+		actual_playlist = []
+		var next_song: Song = AudioManager.song_library.songs_list.values()[songs[0]]
+		actual_playlist.append([next_song.name, next_song.author])
+		playlist_index = 0
 		return
 	
 	actual_playlist = []
@@ -29,9 +35,11 @@ func generate_playlist(songs: Array, mode: int = 0):
 			var new_songs_order = []
 			new_songs_order.append_array(songs)
 			new_songs_order.shuffle()
+			"""
 			for j in 2:
 				new_songs_order.shuffle()
 				new_songs_order.append_array(new_songs_order)
+			"""
 			for i in len(new_songs_order):
 				var next_song: Song = AudioManager.song_library.songs_list.values()[new_songs_order[i % len(new_songs_order)]]
 				actual_playlist.append([next_song.name, next_song.author])

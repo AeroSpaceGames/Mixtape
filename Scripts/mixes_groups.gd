@@ -12,8 +12,9 @@ func create_groups():
 	for d in MixesContainer.get_children():
 		d.queue_free()
 	
-	await get_tree().create_timer(0.2).timeout
-	
+	draw_groups()
+
+func draw_groups():
 	var mixtape_res: Array[Mixtape] = PlaylistManager.mix_library.mixtape_list.values()
 	for i in len(mixtape_res):
 		var new_group = group_scene.instantiate()
