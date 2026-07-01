@@ -50,3 +50,23 @@ func play_song(data: Song):
 
 func _on_player_finished() -> void:
 	song_ended.emit()
+
+
+func set_effect(idx: int):
+	match idx:
+		0: #Starting slow
+			player.pitch_scale = 0.6
+			player.volume_db = -8
+			var tween = create_tween()
+			if tween.is_running():
+				tween.kill()
+			tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT).set_parallel()
+			tween.parallel().tween_property(player, "pitch_scale", 1.0, 0.4)
+			tween.parallel().tween_property(player, "volume_db", 0, 0.25)
+		1: #Ending slow
+			player.pitch_scale = 1.0
+			player.volume_db = 0
+			var tween = create_tween()
+			tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUINT).set_parallel()
+			tween.parallel().tween_property(player, "pitch_scale", 0.6, 0.25)
+			tween.parallel().tween_property(player, "volume_db", -8, 0.5)

@@ -51,5 +51,6 @@ script = ExtResource("1_nhj3b")
 song_library = SubResource("Resource_a50qa")
 
 [node name="Player" type="AudioStreamPlayer" parent="." unique_id=421325531]
+bus = &"MusicPlayer"
 
 [connection signal="finished" from="Player" to="." method="_on_player_finished"]

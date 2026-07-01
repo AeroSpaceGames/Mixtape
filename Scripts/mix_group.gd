@@ -16,6 +16,8 @@ func _ready() -> void:
 	label_changed()
 
 func duration_changed():
+	if !my_name in PlaylistManager.mix_library.mixtape_list:
+		return
 	if PlaylistManager.mix_library.mixtape_list[my_name].duration != 0:
 		duration.text = from_seconds_to_clockhour(int(PlaylistManager.mix_library.mixtape_list[my_name].duration))
 

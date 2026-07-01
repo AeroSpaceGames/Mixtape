@@ -11,7 +11,9 @@ var group_scene = preload("res://Scenes/song_group.tscn")
 @onready var new_name: LineEdit = %NewName
 @onready var label: TextureRect = %Label
 @onready var player_label: TextureRect = %PlayerLabel
+@onready var label_texture: TextureRect = %LabelTexture
 
+var new_design: int = 0
 
 var _coll: CollectionSave
 
@@ -24,6 +26,7 @@ func _ready() -> void:
 func read_mixtape(nm: String):
 	var res = PlaylistManager.mix_library.mixtape_list[nm]
 	recent_mixtape = res
+	new_design = recent_mixtape.design
 	player_label.texture = CasettesTextures.labels[res.design]
 	flow_manager.go_to_library()
 	_set_current()
@@ -31,7 +34,9 @@ func read_mixtape(nm: String):
 func open_mixtape(nm: String):
 	var res = PlaylistManager.mix_library.mixtape_list[nm]
 	
+	new_design = res.design
 	label.texture = CasettesTextures.labels[res.design]
+	label_texture.texture = CasettesTextures.labels[new_design]
 	new_name.text = res.my_name
 	sort_songs(res.song_indexes)
 	recent_mixtape = res
@@ -41,6 +46,7 @@ func open_mixtape(nm: String):
 func close_casette():
 	group_handle.clean_groups()
 	recent_mixtape = Mixtape.new()
+	new_design = 0
 	hide()
 
 func search_text_changed(txt: String):
@@ -146,11 +152,28 @@ func save_mix_label(txt: String, design: int):
 func save_data():
 	var txt: String = new_name.text
 	save_mix_name(txt)
-	#save_mix_label(txt, 0)
-	
-	
+	save_mix_label(txt, new_design)
+	await get_tree().create_timer(0.2).timeout
+	draw_new_data(txt)
+
+func draw_new_data(txt: String):
 	mixes_groups.create_groups()
 	open_mixtape(txt)
+
+
+func change_label(k: int = 1):
+	new_design += 1 * k
+	if new_design < 0:
+		new_design = len(PlaylistManager.designs) - 1
+	new_design %= len(PlaylistManager.designs)
+	label_texture.texture = CasettesTextures.labels[new_design]
+
+func prev_label():
+	change_label(-1)
+
+func next_label():
+	change_label()
+
 
 
 func _set_current():

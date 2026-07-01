@@ -85,13 +85,14 @@ func move_to_second(changed: bool):
 
 func pause_song():
 	if AudioManager.selected_song != "":
-		AudioManager.pause()
-		seconds.paused = true
-	
-		led.texture = led_texts[int(AudioManager.playing)]
-		play.texture_normal = on_play[int(AudioManager.playing)]
-		pause.texture_normal = on_pause[int(!AudioManager.playing)]
 		casette_anims.play("Stopping")
+
+func really_paused_song():
+	seconds.paused = true
+	AudioManager.pause()
+	led.texture = led_texts[int(AudioManager.playing)]
+	play.texture_normal = on_play[int(AudioManager.playing)]
+	pause.texture_normal = on_pause[int(!AudioManager.playing)]
 
 func resume_song():
 	if AudioManager.selected_song != "":
